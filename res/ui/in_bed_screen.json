@@ -1,0 +1,62 @@
+
+{
+  "namespace": "bed",
+
+  // Screen //
+
+  "in_bed_screen@common.base_screen": {
+    "controls": [
+      { "@common.misc_label_screen": { } }, //Added/Modified
+      {
+        "background": {
+          "type": "image",
+          "size": [ "100%", "100%" ],
+          "texture": "textures/gui/newgui/White",
+          "color": [ 0.0, 0.0, 0.0 ],
+          "alpha": 0.5,
+          "uv_size": [ 1, 1 ],
+          "nineslice_size": 1
+        }
+      },
+      {
+        "wake_up_button_panel": {
+          "type": "panel",
+          "size": [ 208, "15%" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, "-5.0%" ], //Modified
+          "controls": [
+            {
+              "wake_up_button@common.legacy_button": { //Modified
+                "layer": 1,
+                // Size is defaulted to the size of the text fitting on one line
+                // Must specify a max size for layout to solve
+                "size": [ 200, 20], //Added/Modified
+                "$button_text_max_size": [ 120, 10 ],
+                "$button_label_text": "multiplayer.stopSleeping", //Modified
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.wake_up_button",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.wake_up_button",
+                    "mapping_type": "pressed"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "select_button@death.a_button": {
+          "layer": 1,
+          "offset": [ 0, "-5%" ]
+        }
+      }
+    ]
+  }
+}

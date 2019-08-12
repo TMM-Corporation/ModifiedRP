@@ -1,0 +1,9 @@
+{
+  "enabled":true,
+  "debug":false,
+  "CallBacks": {
+    "playerAttack":false,
+    "itemUse":false,
+    "guiChanged":false
+  }
+}

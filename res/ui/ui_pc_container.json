@@ -1,0 +1,225 @@
+/*
+    Note: is made by @CrizArtEX.
+    just for fun, simply for make W10 Gui exactly like PC in different textures like dokucraft, paper cut out, or other different
+    gui textures without need about "dialog_background_atlas.png".
+
+    Enjoy :P.
+*/
+{
+  "namespace": "pc_container",
+
+  //Begin with container images.
+
+  "dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/inventory",
+    "layer": 1,
+    "uv": [ 0, 0 ],
+    "uv_size": [ 182, 182 ]
+  },
+
+  "dialog_backgroud_blank@dialog_backgroud_base": {
+    "type": "panel"
+  },
+
+  "dialog_background_inventory@dialog_background_base": {
+    "uv_size": [ 182, 184 ]
+  },
+
+  "dialog_background_anvil@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/anvil",
+    "uv_size": [ 182, 182 ]
+  },
+
+  "dialog_background_furnace@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/furnace",
+    "uv_size": [ 182, 180 ]
+  },
+
+  "dialog_background_crafting@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/crafting_table",
+    "uv_size": [ 182, 172 ]
+  },
+
+  "dialog_background_dispenser@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/dispenser",
+    "uv_size": [ 182, 176 ]
+  },
+
+  "dialog_background_hopper@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/hopper",
+    "uv_size": [ 182, 138 ]
+  },
+
+  "dialog_background_beacon@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/beacon",
+    "uv": [ 0, 0 ],
+    "uv_size": [ 216, 218 ]
+  },
+
+    "dialog_background_allitems@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/allitems",
+    "uv": [ 0, 0 ],
+    "uv_size": [ 176, 208 ]
+  },
+
+  "dialog_background_enchanting@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/enchanting_table",
+    "uv_size": [ 182, 182 ]
+  },
+
+  "dialog_background_brewing@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/brewing_stand",
+    "uv_size": [ 182, 172 ]
+  },
+
+  "dialog_background_horse@dialog_background_base": {
+    "type": "image",
+    "texture": "textures/gui/container/horse",
+    "uv_size": [ 182, 172 ]
+  },
+
+  "dialog_background_chest": {
+    "type": "panel",
+    "offset": [ 0, 0 ],
+    "size": [ 182, 176 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      {
+        "@pc_container.dialog_background_large_chest": {
+          "offset": [ 0, -50.5 ],
+          "uv": [ 0, 0 ],
+          "uv_size": [ 182, 75 ]
+        }
+      },
+      {
+        "@pc_container.dialog_background_large_chest": {
+          "offset": [ 0, 37.5 ],
+          "uv": [ 0, 129 ],
+          "uv_size": [ 182, 101 ]
+        }
+      }
+    ]
+  },
+
+  "dialog_background_large_chest": {
+    "type": "image",
+    "texture": "textures/gui/container/generic_54",
+    "uv_size": [ 182, 230 ],
+    "layer": 1
+  },
+
+  "dialog_creative_panel": {
+    "type": "image",
+    "layer": 1,
+    "uv": [ 0, 0 ],
+    "uv_size": [ 216, 142 ]
+  },
+
+  "dialog_creative_tabs@dialog_creative_panel": {
+    "type": "image",
+    "texture": "textures/gui/container/creative_inventory/tab_items",
+    "layer": 1
+  },
+
+  "dialog_creative_search@dialog_creative_panel": {
+    "type": "image",
+    "texture": "textures/gui/container/creative_inventory/tab_item_search",
+    "layer": 1
+  },
+
+  "dialog_creative_inventory@dialog_creative_panel": {
+    "type": "image",
+    "texture": "textures/gui/container/creative_inventory/tab_inventory",
+    "layer": 1
+  },
+
+  //For horse dialog screen
+  "container_item_single": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ 18, 18 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$cell_image_size": [ 18, 18 ],
+    "$cell_overlay_ref": "common.cell_overlay",
+    "$button_ref": "common.container_slot_button_prototype",
+    "$stack_count_visible": true,
+    "$item_renderer": "common.item_renderer",
+    "controls": [
+      {
+        "@horse.donkey_chest_container_image": { }
+      },
+      {
+        "item": {
+          "type": "panel",
+          "size": [ 18, 18 ],
+          "controls": [
+            {
+              "@common.stack_count_label": {
+                "visible": "$stack_count_visible"
+              }
+            },
+            {
+              "@$item_renderer": {
+                "size": [ 18, 18 ]
+              }
+            },
+            { "@common.durability_bar": { } }
+          ]
+        }
+      },
+      { "item_cell_overlay_ref@$cell_overlay_ref": { } },
+      { "item_button_ref@$button_ref": { } }
+    ]
+  },
+  //For creative dialog screen
+  "container_item_scroll": {
+    "type": "panel",
+    "layer": 1,
+    "size": [ 18, 18 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "$cell_image_size": [ 9, 9 ],
+    "$cell_overlay_ref": "common.cell_overlay",
+    "$button_ref": "common.container_slot_button_prototype",
+    "$stack_count_visible": true,
+    "$item_renderer": "common.item_renderer",
+    "controls": [
+      {
+        "@crafting.scroll_cell_image": { }
+      },
+      {
+        "item": {
+          "type": "panel",
+          "size": [ 18, 18 ],
+          "controls": [
+            {
+              "@common.stack_count_label": {
+                "visible": "$stack_count_visible"
+              }
+            },
+            {
+              "@$item_renderer": {
+                "size": [ 18, 18 ]
+              }
+            },
+            { "@common.durability_bar": { } }
+          ]
+        }
+      },
+      { "item_cell_overlay_ref@$cell_overlay_ref": { } },
+      { "item_button_ref@$button_ref": { } }
+    ]
+  }
+}

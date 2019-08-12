@@ -1,0 +1,816 @@
+
+{
+  "namespace": "beacon",
+  //---------------------------------------------------------------------------
+  // Screens
+  //---------------------------------------------------------------------------
+
+  "beacon_panel@common.inventory_screen_common": {
+    "$use_compact_close_button": true, //Added/Modified
+    "controls": [
+      { "@common.misc_custom_screen": { } }, //Added/Modified
+      { "@common.container_gamepad_helpers": { } },
+      { "@common.container_keyboard_helpers_panel": { } }, //Added/Modified
+      { "@common.screen_background": { } },
+      {
+        "@common.root_panel": {
+          "layer": 1,
+          "size": [ 216, 218 ], //Modified
+          "controls": [
+            { "@common.input_panel": { } },
+            { "@common.common_panel": {
+                "$dialog_background": "pc_container.dialog_background_beacon" //Added/Modified
+              }
+            },
+            {
+              "beacon_inventory": {
+                "type": "panel",
+                "controls": [
+                  {
+                    "@beacon.beacon_inner_panel": {
+                      "offset": [ 1, 4 ], //Modified
+                      "layer": 2
+                    }
+                  },
+                  {
+                    "payment_panel@beacon.payment_panel": {
+                      "offset": [ 1, 8 ], //Modified
+                      "layer": 2
+                    }                 
+                  },
+                  { "@common.inventory_panel_bottom_half": {
+                      "offset": [ 0, 0 ] //Added/Modified
+                    }
+                  },
+                  { "@common.hotbar_grid_template": {
+                      "offset": [ 0, -10 ] //Added/Modified
+                    }
+                  },
+                  { "@common.inventory_selected_icon_button": { } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "image_atlas": {
+    "type": "image",
+    "texture": "textures/gui/gui"
+  },
+
+  //Added/Modified
+  "image_atlas_pc": {
+    "type": "image",
+    "texture": "textures/gui/container/beacon"
+  },
+  "pyramid_image@beacon.image_atlas": {
+    "size": [ 19, 20 ],
+    "uv_size": [ 19, 20 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_middle"
+  },
+  
+  "pyramid_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "controls": [
+      {
+        "level1@beacon.pyramid_image": {
+          "uv": [ 144, 228 ],
+          "offset": [ -98, 18 ]
+        }
+      },
+      {
+        "level2@beacon.pyramid_image": {
+          "uv": [ 163, 228 ],
+          "offset": [ -98, 43 ]
+        }
+      },
+      {
+        "level3@beacon.pyramid_image": {
+          "uv": [ 182, 228 ],
+          "offset": [ -98, 68 ]
+        }
+      },
+      {
+        "level4@beacon.pyramid_image": {
+          "uv": [ 201, 228 ],
+          "offset": [ 42, 18 ]
+        }
+      }
+    ]
+  },
+  "item_seperator@beacon.image_atlas": {
+    "size": [ 5, 18 ],
+    "uv_size": [ 5, 18 ],
+    "uv": [ 171, 206 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left"
+  },
+  "item_renderer": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "size": [ 18, 18 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left"
+  },
+  "usable_items_panel": {
+    "type": "panel",
+    "size": [ 82, 18 ],
+    "controls": [ //Modified
+      {
+        "emerald@beacon.item_renderer": {
+          "offset": [ 0, 0 ],
+          "property_bag": {
+            "#item_id_aux": 25427968
+          }
+        }
+      },
+      {
+        "diamond@beacon.item_renderer": {
+          "offset": [ 18, 0 ],
+          "property_bag": {
+            "#item_id_aux": 17301504
+          }
+        }
+      },
+      {
+        "gold@beacon.item_renderer": {
+          "offset": [ 36, 0 ],
+          "property_bag": {
+            "#item_id_aux": 17432576
+          }
+        }
+      },
+      {
+        "iron@beacon.item_renderer": {
+          "offset": [ 54, 0 ],
+          "property_bag": {
+            "#item_id_aux": 17367040
+          }
+        }
+      }
+    ]
+  },
+  "base_image@beacon.image_atlas": {
+    "$image_size|default": [ 18, 18 ],
+    "size": "$image_size",
+    "$image_uv_size|default": [ 18, 18 ],
+    "uv_size": "$image_uv_size",
+    "uv": "$image_uv",
+    "bindings": [
+      {
+        "binding_name": "#button_visible",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection"
+      }
+    ]
+  },
+  //Added/Modified
+  "base_image_pc@beacon.image_atlas_pc": {
+    "$image_size|default": [ 18, 18 ],
+    "size": "$image_size",
+    "$image_uv_size|default": [ 18, 18 ],
+    "uv_size": "$image_uv_size",
+    "uv": "$image_uv",
+    "bindings": [
+      {
+        "binding_name": "#button_visible",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection"
+      }
+    ]
+  },
+  "hover_text@common.hover_text": {
+    "bindings": [
+      {
+        "binding_name": "#button_hover",
+        "binding_name_override": "#hover_text",
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection"
+      }
+    ]
+  },
+  "hover_state@common.button_state_hover": {
+    "controls": [
+      { "@beacon.hover_text": { } }
+    ]
+  },
+  //---------------------------------------------------------------------------
+  // #region Modified button assets.
+  //---------------------------------------------------------------------------
+  "button_unchecked_default@beacon.image_atlas_pc": { //Modified
+    "uv_size": [ 22, 22 ],
+    "uv": [ 0, 218 ] //Modified
+  },
+  "button_unchecked_hover@beacon.image_atlas_pc": { //Modified
+    "size": [ 22, 22 ],
+    "uv_size": [ 22, 22 ],
+    "uv": [ 66, 218 ],  //Modified
+    "controls": [
+      { "@beacon.hover_text": { } }
+    ]
+  },
+  "button_checked_hover@beacon.image_atlas_pc": { //Modified
+    "uv_size": [ 22, 22 ],
+    "uv": [ 22, 218 ], //Modified
+    "controls": [
+      { "@beacon.hover_text": { } }
+    ]
+  },
+  "button_locked@beacon.image_atlas_pc": { //Modified
+    "uv_size": [ 22, 22 ],
+    "uv": [ 44, 218 ]
+  },
+  "button_locked_hover@beacon.image_atlas_pc": { //Modified
+    "uv_size": [ 22, 22 ],
+    "uv": [ 44, 218 ], //Modified
+    "controls": [
+      { "@beacon.hover_text": { } }
+    ]
+  },
+  "button_checked@beacon.image_atlas_pc": { //Modified
+    "uv_size": [ 22, 22 ],
+    "uv": [ 22, 218 ] //Modified
+  },
+  // #endregion
+
+  "toggle_button@common.toggle": {
+    "size": [ 22, 22 ],
+    "layer": 1,
+    "$toggle_name": "$button_name",
+    "$unchecked_control": "beacon.button_unchecked_default",
+    "$checked_control": "beacon.button_checked",
+    "$unchecked_hover_control": "beacon.button_unchecked_hover",
+    "$checked_hover_control": "beacon.button_checked_hover",
+    "$unchecked_locked_control": "beacon.button_locked",
+    "$checked_locked_control": "beacon.button_locked",
+    "$unchecked_locked_hover_control": "beacon.button_locked_hover",
+    "$checked_locked_hover_control": "beacon.button_locked_hover",
+
+    "bindings": [
+      {
+        "binding_name": "#button_visible",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection"
+      },
+      {
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection_details"
+      },
+      {
+        "binding_type": "collection",
+        "binding_name": "#selected",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#toggle_state"
+      }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  //Added/Modified
+  "toggle_button_pc@common.toggle": {
+    "size": [ 22, 22 ],
+    "layer": 1,
+    "$toggle_name": "$button_name",
+    "$unchecked_control": "beacon.button_unchecked_default",
+    "$checked_control": "beacon.button_checked",
+    "$unchecked_hover_control": "beacon.button_unchecked_hover",
+    "$checked_hover_control": "beacon.button_checked_hover",
+    "$unchecked_locked_control": "beacon.button_locked",
+    "$checked_locked_control": "beacon.button_locked",
+    "$unchecked_locked_hover_control": "beacon.button_locked_hover",
+    "$checked_locked_hover_control": "beacon.button_locked_hover",
+
+    "bindings": [
+      {
+        "binding_name": "#button_visible",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection"
+      },
+      {
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection_details"
+      },
+      {
+        "binding_type": "collection",
+        "binding_name": "#selected",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#toggle_state"
+      }
+    ],
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "base_button@common.button": {
+    "size": [ 22, 22 ],
+    "layer": 0,
+    "bindings": [
+      {
+        "binding_name": "$button_active",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection"
+      },
+      {
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection_details"
+      }
+    ],
+    "controls": [
+      {
+        "default@common.button_state_default": {
+          "uv_size": [ 22, 22 ],
+          "uv": [ 166, 184 ]
+        }
+      },
+      {
+        "hover@beacon.hover_state": {
+          "uv_size": [ 22, 22 ],
+          "uv": [ 232, 184 ]
+        }
+      },
+      {
+        "pressed@common.button_state_pressed": {
+          "uv_size": [ 22, 22 ],
+          "uv": [ 188, 184 ]
+        }
+
+      }
+    ]
+  },
+
+  //Added/Modified
+  "base_button_pc@common.button": {
+    "size": [ 22, 22 ],
+    "layer": 0,
+    "bindings": [
+      {
+        "binding_name": "$button_active",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection"
+      },
+      {
+        "binding_collection_name": "$button_name",
+        "binding_type": "collection_details"
+      }
+    ],
+    "controls": [
+      {
+        "default@common.button_state_default": {
+          "texture": "textures/gui/container/beacon", //Added/Modified
+          "uv_size": [ 22, 22 ],
+          "uv": [ 0, 218 ] //Modified
+        }
+      },
+      {
+        "hover@beacon.hover_state": {
+          "texture": "textures/gui/container/beacon", //Added/Modified
+          "uv_size": [ 22, 22 ],
+          "uv": [ 66, 218 ] //Modified ]
+        }
+      },
+      {
+        "pressed@common.button_state_pressed": {
+          "texture": "textures/gui/container/beacon", //Added/Modified
+          "uv_size": [ 22, 22 ],
+          "uv": [ 22, 218 ] //Modified
+        }
+
+      }
+    ]
+  },
+
+  "active_button@beacon.base_button": {
+    "$button_active": "#active",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  //Added/Modified
+  "active_button_pc@beacon.base_button_pc": {
+    "$button_active": "#active",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_ok",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "inactive_button@beacon.base_button": {
+    "$button_active": "#inactive",
+    "pressed_control": "",
+    "button_mappings": [ ],
+    "controls": [
+      {
+        "default@common.button_state_default": {
+          "uv_size": [ 22, 22 ],
+          "uv": [ 210, 184 ]
+        }
+      },
+      {
+        "hover@beacon.hover_state": {
+          "uv_size": [ 22, 22 ],
+          "uv": [ 210, 184 ]
+        }
+      }
+    ]
+  },
+  //Added/Modified
+  "inactive_button_pc@beacon.base_button_pc": {
+    "$button_active": "#inactive",
+    "pressed_control": "",
+    "button_mappings": [ ],
+    "controls": [
+      {
+        "default@common.button_state_default": {
+          "texture": "textures/gui/container/beacon", //Added/Modified
+          "uv_size": [ 22, 22 ],
+          "uv": [ 44, 218 ] //Modified
+        }
+      },
+      {
+        "hover@beacon.hover_state": {
+          "texture": "textures/gui/container/beacon", //Added/Modified
+          "uv_size": [ 22, 22 ],
+          "uv": [ 44, 218 ] //Modified
+        }
+      }
+    ]
+  },
+
+  "selected_button@beacon.base_button": {
+    "$button_active": "#selected",
+    "button_mappings": [ ],
+    "pressed_control": "",
+    "controls": [
+      {
+        "default@common.button_state_default": {
+          "uv_size": [ 22, 22 ],
+          "uv": [ 188, 184 ]
+        }
+      },
+      {
+        "hover@beacon.hover_state": {
+          "uv_size": [ 22, 22 ],
+          "uv": [ 188, 184 ]
+        }
+      }
+    ]
+  },
+  
+  //Added/Modified
+  "selected_button_pc@beacon.base_button_pc": {
+    "$button_active": "#selected",
+    "button_mappings": [ ],
+    "pressed_control": "",
+    "controls": [
+      {
+        "default@common.button_state_default": {
+          "texture": "textures/gui/container/beacon", //Added/Modified
+          "uv_size": [ 22, 22 ],
+          "uv": [ 22, 218 ] //Modified
+        }
+      },
+      {
+        "hover@beacon.hover_state": {
+          "texture": "textures/gui/container/beacon", //Added/Modified
+          "uv_size": [ 22, 22 ],
+          "uv": [ 22, 218 ] //Modified
+        }
+      }
+    ]
+  },
+
+  "secondary_effect_base@beacon.base_image": {
+    "bindings": [
+      {
+        "binding_name": "#extra_image_selection",
+        "binding_name_override": "#visible",
+        "binding_collection_name": "$effect_name",
+        "binding_type": "collection"
+      }
+    ]
+  },
+  "speed_secondary@beacon.secondary_effect_base": {
+    "$effect_name": "speed",
+    "$image_uv": [ 0, 184 ]
+  },
+  "haste_secondary@beacon.secondary_effect_base": {
+    "$effect_name": "haste",
+    "$image_uv": [ 36, 184 ]
+  },
+  "resist_secondary@beacon.secondary_effect_base": {
+    "$effect_name": "resist",
+    "$image_uv": [ 108, 202 ]
+
+  },
+  "jump_secondary@beacon.secondary_effect_base": {
+    "$effect_name": "jump",
+    "$image_uv": [ 36, 202 ]
+  },
+  "strength_secondary@beacon.secondary_effect_base": {
+    "$effect_name": "strength",
+    "$image_uv": [ 72, 184 ]
+  },
+  "image_template": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "layer": 3,
+    "controls": [
+      { "@beacon.base_image": { } }
+    ]
+  },
+  //Added/Modified
+  "image_template_pc": {
+    "type": "panel",
+    "size": [ 21, 22 ],
+    "layer": 3,
+    "controls": [
+      { "@beacon.base_image_pc": { } }
+    ]
+  },
+  "secondary_effect_images@beacon.image_template": {
+    "controls": [
+      { "@beacon.speed_secondary": { } },
+      { "@beacon.haste_secondary": { } },
+      { "@beacon.resist_secondary": { } },
+      { "@beacon.jump_secondary": { } },
+      { "@beacon.strength_secondary": { } }
+    ]
+  },
+  "toggle_template": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$image_control|default": "beacon.image_template",
+    "controls": [
+      { "@beacon.toggle_button": { } },
+      { "@$image_control": { } }
+    ]
+  },
+
+  //Added/Modified
+  "toggle_template_pc": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "$image_control|default": "beacon.image_template",
+    "controls": [
+      { "@beacon.toggle_button_pc": { } },
+      { "@$image_control": { } }
+    ]
+  },
+
+  "button_template@beacon.toggle_template_pc": {
+    "controls": [
+      { "@beacon.active_button": { } },
+      { "@beacon.inactive_button": { } },
+      { "@beacon.image_template": { } }
+    ]
+  },
+
+  //Added/Modified
+  "button_template_pc@beacon.toggle_template_pc": {
+    "controls": [
+      { "@beacon.active_button_pc": { } },
+      { "@beacon.inactive_button_pc": { } },
+      { "@beacon.image_template_pc": { } } //Modified
+    ]
+  },
+
+  "panel_template": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "layer": 4,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_left",
+    "$button_control|default": "beacon.toggle_template",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#active",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      { "@$button_control": { } }
+    ]
+  },
+
+  "panel_template_pc": {
+    "type": "panel",
+    "size": [ 22, 22 ],
+    "layer": 4,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_left",
+    "$button_control|default": "beacon.toggle_template_pc",
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_name": "#active",
+        "binding_collection_name": "$button_name",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      { "@$button_control": { } }
+    ]
+  },
+
+  "button_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "speed_panel@beacon.panel_template": {
+          "offset": [ -62, 24 ],
+          "$button_name": "speed",
+          "controls": [
+            {
+              "@beacon.toggle_template": {
+                "$image_uv": [ 0, 184 ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "haste_panel@beacon.panel_template": {
+          "offset": [ -38, 24 ],
+          "$button_name": "haste",
+          "$image_uv": [ 36, 184 ]
+        }
+      },
+      {
+        "resist_panel@beacon.panel_template": {
+          "offset": [ -62, 47 ],
+          "$button_name": "resist",
+          "$image_uv": [ 108, 202 ]
+        }
+      },
+      {
+        "jump_panel@beacon.panel_template": {
+          "offset": [ -38, 47 ],
+          "$button_name": "jump",
+          "$image_uv": [ 36, 202 ]
+        }
+      },
+      {
+        "strength_panel@beacon.panel_template": {
+          "offset": [ -50, 70 ],
+          "$button_name": "strength",
+          "$image_uv": [ 72, 184 ]
+        }
+      },
+      {
+        "regen_panel@beacon.panel_template": {
+          "offset": [ 26, 47 ],
+          "$button_name": "regen",
+          "$image_uv": [ 126, 184 ]
+        }
+      },
+      {
+        "extra_panel@beacon.panel_template": {
+          "offset": [ 50, 47 ],
+          "$button_name": "extra",
+          "$image_control": "beacon.secondary_effect_images"
+        }
+      }
+    ]
+  },
+
+  // Payment Panel //
+
+  "payment_panel": {
+    "type": "panel",
+    "size": [ "100%", 22 ],
+    "controls": [
+      {
+        "confirm_panel@beacon.panel_template_pc": {
+          "offset": [ 42, 0.5 ], //Modified
+          "$button_name": "confirm",
+          "$image_offset": [ -0.5, 1 ], //Added/Modified
+          "$image_uv": [ 88, 218 ], //Modified
+          "$image_uv_size": [ 21, 22 ], //Modified
+          "$image_size": [ 21, 22 ], //Modified
+          "$button_control": "beacon.button_template_pc",
+          "anchor_from": "center",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "ingredient_item@common.container_item": {
+          "$item_collection_name": "beacon_payment_items",
+          "offset": [ 8, 1 ], //Modified
+          "anchor_from": "center",
+          "anchor_to": "left_middle"
+        }
+      },
+      {
+        "usable_items_panel@beacon.usable_items_panel": {
+          "offset": [ 1.5, 1 ], //Modified
+          "anchor_from": "center",
+          "anchor_to": "right_middle"
+        }
+      }
+    ]
+  },
+
+  "beacon_label@common.section_heading_label": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "color": [ 1, 1, 1, 1.0 ], //Modified
+    "shadow": false
+  },
+  //---------------------------------------------------------------------------
+  // #region Modified some codes. Converting into image to panel.
+  //---------------------------------------------------------------------------
+  "beacon_inner_panel": {
+    "type": "panel",
+    "size": [ 200, 96 ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "@beacon.button_panel": { } },
+      {
+        "primary_power_label@beacon.beacon_label": {
+          "text": "tile.beacon.primary",
+          "offset": [ -50, 6 ]
+        }
+      },
+      {
+        "secondary_power_label@beacon.beacon_label": {
+          "text": "tile.beacon.secondary",
+          "offset": [ 50, 6 ]
+        }
+      }
+    ]
+  },
+  // #endregion
+  "beacon_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": false,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$visible_screen": "beacon.beacon_panel"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$visible_screen": "beacon_pocket.beacon_panel",
+        "$close_on_player_hurt": true
+      }
+    ],
+    "controls": [
+      { "screen@$visible_screen": { } }
+    ]
+  }
+}
