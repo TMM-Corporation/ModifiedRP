@@ -178,40 +178,15 @@
       { "@hud.progress_text_label":{
         "offset": [ 0, 0 ]
       } }
-      //8 direction about borders (for console mode!)
-      // { "@hud.border_xp_number":{ 
-      //   "offset": [ -1, 0 ]
-      // } },
-      // { "@hud.border_xp_number":{
-      //   "offset": [ 0, -1 ]
-      // } },
-      // { "@hud.border_xp_number":{
-      //   "offset": [ 0, 1 ]
-      // } },
-      // { "@hud.border_xp_number":{
-      //   "offset": [ 1, 0 ]
-      // } },
-      // { "@hud.border_xp_number":{ 
-      //   "offset": [ -1, -1 ]
-      // } },
-      // { "@hud.border_xp_number":{
-      //   "offset": [ 1, -1 ]
-      // } },
-      // { "@hud.border_xp_number":{
-      //   "offset": [ 1, 1 ]
-      // } },
-      // { "@hud.border_xp_number":{
-      //   "offset": [ -1, 1 ]
-      // } }
     ]
   },
 
   "progress_text_label": {
     "type": "label",
     "layer": 2,
-    "shadow": false, //Modified
+    "shadow": true, //Modified
     "text": "#level_number",
-    "color": [ 0, 0, 1, 0 ], //1- r, 2- g, 3- blue, 4-w
+    "color": [ 0.04, 1, 0.07, 0 ],
     "anchor_from": "top_middle",
     "anchor_to": "bottom_middle",
     "bindings": [
@@ -307,11 +282,13 @@
     "texture": "textures/gui/gui",
     "anchor_from": "center",
     "anchor_to": "center",
-    "size": [ 13, 4 ],
+    "size": [ 13, 12 ],
     "layer": 30,
     "alpha": 0.65,
-    "uv": [ 228, 248 ],
-    "uv_size": [ 28, 8 ]
+    "uv": [ 240, 230 ],
+    // "uv": [ 228, 248 ],
+    "uv_size": [ 16, 17 ]
+    // "uv_size": [ 28, 8 ]
   },
 
   "bound_button_label@button_label": {
@@ -768,32 +745,37 @@
   "not_centered_gui_elements": {
     "type": "panel",
     "controls": [
-      //Column 1: Health + Armor
+      //Column 1: Health
       {
         "heart_rend@heart_renderer": {
-          "offset": [ -90, -49 ],
+          "offset": [ 5, 5 ],
+          "ignored": false,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer":1
+        }
+      },
+      //Column 2: Hunger + Bubbles + Armor
+      {
+        "hunger_rend@hunger_renderer": {
+          "offset": [ 94, -40 ],
+          "ignored": false,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
         }
       },
       {
         "armor_rend@armor_renderer": {
-          "offset": [ -90, -50 ],
-          "anchor_from": "bottom_middle",
-          "anchor_to": "bottom_middle"
-        }
-      },
-      //Column 2: Hunger + Bubbles
-      {
-        "hunger_rend@hunger_renderer": {
-          "offset": [ 90, -49 ],
+          "offset": [ -94, -78 ],
+          "ignored": false,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle"
         }
       },
       {
         "bubbles_rend@bubbles_renderer": {
-          "offset": [ 90, -40 ],
+          "offset": [ 94, -49 ],
+          "ignored": false,
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",
           "bindings": [
@@ -807,10 +789,11 @@
       //default
       {
         "horse_heart_rend@horse_heart_renderer": {
-          "offset": [ -2, 22 ],
-          "anchor_from": "top_right",
-          "anchor_to": "top_right",
-          "layer": 1
+          "offset": [ -14, -65 ],
+          "ignored": false,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer":2
         }
       },
       {
@@ -845,7 +828,7 @@
     "bindings": [
       {
         "binding_name": "#hud_visible_not_centered",
-        "binding_name_override": "#visible",
+        // "binding_name_override": "#visible",
         "binding_type": "global"
       }
     ]

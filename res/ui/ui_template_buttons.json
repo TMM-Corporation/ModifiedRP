@@ -40,7 +40,7 @@
     
     "locked_control": "locked",
 
-    "$default_color": [ 0.3, 0.3, 0.3 ],
+    "$default_color": [ 1, 1, 1 ],
     "$hover_color": [ 1, 1, 1 ],
     "$pressed_color": [ 1, 1, 1 ],
     "$locked_color": [ 0.7, 0.7, 0.7 ],

@@ -18,7 +18,7 @@
     "size": [ "default", "default" ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "color": [ 0.3, 0.3, 0.3 ]
+    "color": [ 1, 1, 1 ]
   },
 
   "label": {
@@ -1155,7 +1155,7 @@
         "scope": "view"
       }
     ],
-    "$default_text_color": [ 0.3, 0.3, 0.3 ],
+    "$default_text_color": [ 1, 1, 1 ],
     "$screen_content": "skin_picker.skin_picker_screen_content"
   },
 

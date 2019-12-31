@@ -1,4 +1,4 @@
-//File modified by @CrizArtEX
+//File modified by @ToxesFoxes
 /********************************************************
 +*   (c) Mojang. All rights reserved                       *
 +*   (c) Microsoft. All rights reserved.                   *
@@ -12,7 +12,7 @@
     "layer": 1,
     "texture": "textures/gui/titleOriginal",
     "uv": [ 0, 0 ],
-    "uv_size": [ 1936, 365 ]
+    "uv_size": [ 1935, 368 ]
   },
 
   "title_image_osx": {
@@ -20,7 +20,7 @@
     "layer": 1,
     "texture": "textures/gui/titleOriginal",
     "uv": [ 0, 0 ],
-    "uv_size": [ 1936, 375 ]
+    "uv_size": [ 1935, 375 ]
   },
 
   "title_image_pocket": {
@@ -30,7 +30,7 @@
     "anchor_to": "top_middle",
     "texture": "textures/gui/title",
     "uv": [ 0, 0 ],
-    "uv_size": [ 1936, 365 ] //Modified
+    "uv_size": [ 1935, 368 ] //Modified
   },
 
   "title_image_edu": {
@@ -48,7 +48,7 @@
     "anchor_to": "top_middle",
     "texture": "textures/gui/titleVR",
     "uv": [ 0, 0 ],
-    "uv_size": [ 1936, 375 ]
+    "uv_size": [ 1935, 375 ]
   },
   
   "splash_text": {
@@ -271,7 +271,7 @@
         "$logo_max_size": [ 275, "18.85%x" ],
         "$logo_size": [ "90%", "18.85%x" ],
         "$title_uv": [ 0, 0 ],
-        "$title_uv_size": [ 1936, 365 ]
+        "$title_uv_size": [ 1935, 368 ]
       },
       {
         "requires": "$osx_edition", 
@@ -280,7 +280,7 @@
         "$logo_max_size": [ 275, "19.37%x" ],
         "$logo_size": [ "90%", "19.37%x" ],
         "$title_uv": [ 0, 0 ],
-        "$title_uv_size": [ 1936, 375 ]
+        "$title_uv_size": [ 1935, 375 ]
       },
       {
         "requires": "$education_edition",
@@ -299,7 +299,7 @@
         "$logo_max_size": [ 275, "18.85%x" ], //Modified
         "$logo_size": [ "90%", "18.85%x" ], //Modified
         "$title_uv": [ 0, 0 ], //Modified
-        "$title_uv_size": [ 1936, 365 ] //Modified
+        "$title_uv_size": [ 1935, 368 ] //Modified
       },
       {
         "requires": "$gear_vr",
@@ -308,7 +308,7 @@
         "$logo_max_size": [ 275, "19.37%x" ],
         "$logo_size": [ "90%", "19.37%x" ],
         "$title_uv": [ 0, 0 ],
-        "$title_uv_size": [ 1936, 375 ]
+        "$title_uv_size": [ 1935, 375 ]
       }
     ],
     "controls": [

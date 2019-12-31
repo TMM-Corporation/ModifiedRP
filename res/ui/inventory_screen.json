@@ -143,24 +143,28 @@
     "type": "image",
     "texture": "textures/gui/container/creative_inventory/tabs",
     "layer": 3,
-    "uv_size": [ 16, 16],
+    "uv_size": [ 16, 16 ],
     "size": [ 16, 16 ]
   },
 
   "building_special_icon@special_icon_image": {
-    "uv": [ 168, 48 ]
+    "uv": [ 170, 52 ],
+    "uv_size": [ 51, 56]
   },
 
   "decorations_special_icon@special_icon_image": {
-    "uv": [ 184, 48 ]
+    "uv": [ 197, 4 ],
+    "uv_size": [ 13, 14]
   },
 
   "tools_special_icon@special_icon_image": {
-    "uv": [ 168, 64 ]
+    "uv": [ 171, 29 ],
+    "uv_size": [ 19, 18]
   },
 
   "miscellaneous_special_icon@special_icon_image": {
-    "uv": [ 184, 64 ]
+    "uv": [ 194, 30 ],
+    "uv_size": [ 19, 16]
   },
 
   "item_renderer": {
@@ -207,8 +211,7 @@
       {
         "@crafting.tab_front": {
           "uv": [ 84, 28 ], //Added/Modified
-          "layer": 5,
-          "offset": [ 0 , -0.2 ]
+          "layer": 5
         }
       },
       {
@@ -320,7 +323,7 @@
     "controls": [
       {
         "@crafting.tab_front": {
-          "uv": [ 56, 28 ], //Added/Modified
+          "uv": [ 28, 28 ], //Added/Modified
           "layer": 5
         }
       },
@@ -339,7 +342,7 @@
     "controls": [
       {
         "@crafting.tab_back": {
-          "uv": [ 56, 0 ], //Added/Modified
+          "uv": [ 28, 0 ], //Added/Modified
           "layer": 5
         }
       },
@@ -358,7 +361,7 @@
     "controls": [
       {
         "@crafting.tab_front": {
-          "uv": [ 112, 28 ], //Added/Modified
+          "uv": [ 56, 28 ], //Added/Modified
           "layer": 5
         }
       },
@@ -377,7 +380,7 @@
     "controls": [
       {
         "@crafting.tab_back": {
-          "uv": [ 112, 0 ], //Added/Modified
+          "uv": [ 56, 0 ], //Added/Modified
           "layer": 5
         }
       },
@@ -396,7 +399,7 @@
     "controls": [
       {
         "@crafting.tab_front": {
-          "uv": [ 84, 28 ], //Added/Modified
+          "uv": [ 28, 28 ], //Added/Modified
           "layer": 5
         }
       },
@@ -415,7 +418,7 @@
     "controls": [
       {
         "@crafting.tab_back": {
-          "uv": [ 84, 0 ], //Added/Modified
+          "uv": [ 28, 0 ], //Added/Modified
           "layer": 5
         }
       },

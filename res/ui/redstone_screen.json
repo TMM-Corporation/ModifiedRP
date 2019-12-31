@@ -23,7 +23,7 @@
   },
 
   "hopper_label@item_dropper_label": {
-    "offset": [ 0, 6 ],
+    "offset": [ 0, 8 ],
     "text": "container.hopper",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle"

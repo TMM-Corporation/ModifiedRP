@@ -1,4 +1,4 @@
-//File modified by @CrizArtEX
+//File modified by @ToxesFoxes
 {
   "namespace": "resource_packs",
 
@@ -34,7 +34,7 @@
         "scope": "view"
       }
     ],
-    "$default_text_color": [ 0.3, 0.3, 0.3 ],
+    "$default_text_color": [ 1, 1, 1 ],
     "$screen_content": "resource_packs.resource_packs_screen_content"
   },
 
@@ -850,7 +850,7 @@
                 "offset": [ 1, 0 ]
               }
             }
-          ],
+          ], 
           "bindings": [
             {
               "binding_collection_name": "$selected_pack_items",
@@ -1004,7 +1004,7 @@
                 "ignored": "$pocket_screen",
                 "size": [ 2, 32 ]
               }
-            },
+            }, 
             {
               "@resource_packs.selected_pack_down_button_panel": {
                 "size": [ 32, 32 ],

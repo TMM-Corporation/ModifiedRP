@@ -1,4 +1,4 @@
-//File modified by @CrizArtEX. Don´t steal the code design ;)
+//File modified by @ToxesFoxes. Don´t steal the code design ;)
 {
   "namespace": "common",
 
@@ -261,7 +261,7 @@
     "alpha": 0.65
   },
 
-  //Extra code for legacy "old" button state. By "@CrizArtEX"
+  //Extra code for legacy "old" button state. By "@ToxesFoxes"
   //Added/Modified
   "legacy_button_state": {
     "type": "image",
@@ -291,7 +291,7 @@
   },
 
   "legacy_button_state_hover@legacy_button_state": {
-    "$text_color": [ 1, 1, 0.62, 1 ],
+    "$text_color": [ 1, 1, 1, 1 ],
     "uv": [ 0, 86 ]
   },
 
@@ -323,7 +323,7 @@
   },
 
   "new_button_label": {
-    "$text_color|default": [ 0.3, 0.3, 0.3 ],
+    "$text_color|default": [ 1, 1, 1 ],
     "type": "label",
     "layer": 3,
     "color": "$text_color",
@@ -1211,7 +1211,7 @@
   },
 
   /////////////////////////////////////////////////////////////////////////////
-  // Keyboard helper common, modified by @CrizArtEX
+  // Keyboard helper common, modified by @ToxesFoxes
   /////////////////////////////////////////////////////////////////////////////
 
   "keyboard_helper_description": {
@@ -1679,7 +1679,7 @@
     "layer": 1,
     "anchor_from": "top_left",
     "anchor_to": "top_left",
-    "color": [ 0.25, 0.25, 0.25, 1.0 ]
+    "color": [ 0.6, 0.6, 0.6, 1.0 ]
   },
 
   "close_button_image": {
@@ -1705,15 +1705,15 @@
     "layer": 10,
     "anchor_from": "top_right",
     "anchor_to": "top_right",
-    "offset": [ -2, 2 ],
+    "offset": [ -1, 1 ],
     "locked_control": "",
     "default_control": "default",
     "hover_control": "hover",
     "pressed_control": "pressed",
     "focus_enabled": false,
-    "$close_button_panel_size|default": [ 15, 15 ],
+    "$close_button_panel_size|default": [ 21, 21 ],
     "$close_button_uv|default": [ 0, 0 ],
-    "$close_button_uv_size|default": [ 15, 15 ],
+    "$close_button_uv_size|default": [ 21, 21 ],
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",
@@ -1747,9 +1747,9 @@
 
   "compact_close_button@close_button": {
     "size": [ 21, 13 ],
-    "$close_button_panel_size|default": [ 15, 7 ],
+    "$close_button_panel_size|default": [ 16, 7 ],
     "$close_button_uv|default": [ 0, 4 ],
-    "$close_button_uv_size|default": [ 15, 7 ]
+    "$close_button_uv_size|default": [ 16, 7 ]
   },
 
   //Added/Modified
@@ -1830,8 +1830,8 @@
     "nineslice_size": 4.0, //Modified
     "texture": "textures/gui/screen_background", //Modified
     "layer": -10,
-    "ignored": true, //Modified
-    "alpha": 0.75,
+    "ignored": false, //Modified
+    "alpha": 0.3,
     "uv": [ 0, 0 ],
     "uv_size": [ 16, 16 ] //Modified
   },
@@ -2239,8 +2239,8 @@
     "texture": "textures/gui/newgui/touchScrollBox",
     "uv": [ 0, 0 ],
     "uv_size": [ 1, 1 ],
-    "layer": 3,
-    "alpha": "@common.anim_scrollbar_box_fadeout"
+    "layer": 3
+    // "alpha": "@common.anim_scrollbar_box_fadeout"
   },
 
   "new_touch_scrollbar_box_image": {
@@ -2249,8 +2249,8 @@
     "texture": "textures/gui/newgui/newTouchScrollBox",
     "uv": [ 0, 0 ],
     "uv_size": [ 1, 1 ],
-    "layer": 3,
-    "alpha": "@common.anim_scrollbar_box_fadeout"
+    "layer": 3
+    // "alpha": "@common.anim_scrollbar_box_fadeout"
   },
 
   "scroll_indent_image": {
@@ -2944,10 +2944,10 @@
     "anchor_from": "top_right",
     "anchor_to": "top_right",
 		"layer": 1,
-		"size": [ 32, 32 ],
-		"offset": [ 36, 0 ],
+		"size": [ 21, 21 ],
+		"offset": [ 27, 2 ],
 		"uv": [ 0, 0 ],
-		"uv_size": [ 32, 32 ]
+		"uv_size": [ 21, 21 ]
   },
 
   // Common panel contains the bg image and the close button
@@ -2986,7 +2986,7 @@
             },
             {
               "compact_close@modified_close_button": { //Modified
-                "offset": [ 27, 2 ], //Added/Modified
+                "offset": [ 27, 6 ], //Added/Modified
                 "layer": 2,
                 "visible": "$use_compact_close_button"
               }
@@ -3034,11 +3034,7 @@
   "base_screen": {
     "type": "screen",
     "vr_mode": "$is_holographic",
-    "$screen_content|default": "common.base_screen_empty_panel",
     "controls": [
-      { "@start.bg": {
-        "ignored": "(not $is_pregame)" //Is added for prevent background in game (you don't say :v).
-      } },
       {
         "variable_control": {
           "type": "panel",
@@ -3103,40 +3099,10 @@
               "$xbl_first_launch_screen_size": [ 316, 146 ], // XBL First Launch Popup, Trial Upsell
               "$modal_screen_size": [ 204, 140 ], // Pop-up dialogue boxes and modal progress screens
               "$patch_notes_screen_size": [ 300, "100% - 4px" ] // Patch Notes Screen
-            },
-            // VR
-            {
-              "requires": "$is_holographic",
-              "$narrow_screen_size": [ "90.3225%", "100% - 4px" ], // Realms Pending Invitations, Add Players
-              "$play_screen_size": [ "83.4375%", "100% - 4px" ], // Play Screen
-              "$realms_settings_screen_size": [ "83.4375%", "100% - 4px" ], // Realms Settings
-              "$realms_create_screen_size": [ "71.2766%", "100% - 4px" ], // Realms Create
-              "$large_screen_size": [ "70.3215%", "100% - 4px" ], // Multiplayer Invitations
-              "$achievement_screen_size": [ "100% - 4px", "100% - 4px" ], // Achievements
-              "$16_9_wide_screen_size": [ "100% - 4px", "100% - 4px" ], // Global Texture Packs
-              "$store_screen_size": [ "100% - 4px", "100% - 4px" ],           // Store Home, purchase Skin Pack
-              "$mashup_screen_size": [ 316, 205 ], // Store Bundle
-              "$skin_pack_screen_size": [ "100% - 4px", "100% - 4px" ],       // Skin Pack
-              "$resource_pack_screen_size": [ "100% - 50px", "45%x + 65px" ],  // Texture Pack
-              "$upsell_screen_size": [ "100% - 76px", "100% - 4px" ], // Skin Pack Upsell
-              "$store_texture_pack_upsell": [ "142.24%y - 36px", "100% - 4px"],               
-              "$create_world_upsell_screen_size": [ "100% - 4px", 223 ],
-              "$create_realm_upsell_screen_size": [ "100% - 4px", 223 ],
-              "$create_realm_upsell_play_screen_size": [ "100% - 4px", 219 ],
-              "$max_create_world_upsell_screen_size": [ "100% - 4px", "100% - 4px" ],
-              "$min_resource_pack_screen_size": [ 306, 202.7 ],
-              "$max_resource_pack_screen_size": [ 313.3, 206 ],
-              "$max_upsell_screen_size": [ "100% - 76px", "56.25%x + 118.5px" ],
-              "$max_skin_pack_screen_size": [ "100% - 4px", "56.25%x - 65.25px + 118.5px" ],
-              "$extra_large_screen_size": [ "100% - 4px", "100% - 4px" ], // Skin Picker
-              "$xbl_optional_signin_screen_size": [ 316, 153 ], // XBL Optional Signin Popup
-              "$xbl_first_launch_screen_size": [ 316, 146 ], // XBL First Launch Popup, Trial Upsell
-              "$modal_screen_size": [ 204, 140 ], // Pop-up dialogue boxes and modal progress screens
-              "$patch_notes_screen_size": [ 300, "100% - 4px" ] // Patch Notes Screen
             }
           ],
           "controls": [
-            { "root_screen_panel@$screen_content": { } },
+            { "root_screen_panel@$screen_content": {  } },
             {
               "popup_dialog_factory": {
                 "type": "factory",
@@ -3237,28 +3203,45 @@
     "texture": "textures/gui/spritesheet"
   },
 
-  //Testing by CrizArtEX
+  //Testing by ToxesFoxes
 
   "misc_custom_screen": {
     "type": "panel",
     "size": [ "100% -12.5%", "100% -12.5%" ], //Making Safe Area
     "controls": [
       //Is for personal use like me, so don't enable it, except for beta tester!!!
-      { "@common.credit_label": { } },
+      // { "@common.credit_label": { } },
       { "@common.player_position_text": { } }
     ]
   },
 
-  /*
+  "player_position_text": {
+    "type": "label",
+    "text": "#text",
+    "offset": [ 0, 10 ],
+    "shadow": true, //Added/Modified
+    "anchor_from": "bottom_middle", //Modified
+    "anchor_to": "bottom_middle", //Modified
+    "bindings": [
+      {
+        "binding_name": "#player_position_visible",
+        "binding_type": "global"
+      },
+      {
+        "binding_name": "#player_position_text",
+        "binding_name_override": "#text"
+      }
+    ]
+  },
   //For personal use, you may modify if you are beta tester.
   "credit_label": {
     "type": "label",
     "shadow":true,
-    "text": "UI Modified by: CrizArtEX",
-    "anchor_from": "bottom_right",
-    "anchor_to": "bottom_right"
+    "offset": [ 0, 10 ],
+    "text": "UI Modified by: ToxesFoxes",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle"
   },     
-  */
 
   // Legacy In Game Close Button //
 

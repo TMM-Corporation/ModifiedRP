@@ -1634,7 +1634,7 @@
             {
               "header_button": {
                 // we don't support importing or creating a new world for realm upload yet
-                "ignored": "$local_world_upload",
+                // "ignored": "$local_world_upload",
                 "type": "panel",
                 "layer": 1,
                 "size": [ "100%", "100%c + 4px" ],
@@ -2229,7 +2229,7 @@
     "type": "image",
     "texture": "textures/gui/close_button_panel",
     "nineslice_size": 0.0,
-    "uv": [ 2, 2 ],
+    "uv": [ 0, 0 ],
     "uv_size": [ 21, 21 ]
   },
 
@@ -2400,8 +2400,8 @@
       {
         "x_image@common.close_button": {
           "layer": 1,
-          "offset": [ 0, -1 ],
-          "size": [ "80%", "80%"],
+          "offset": [ 0, 0 ],
+          "size": [ "100%", "100%"],
           "anchor_from": "center",
           "anchor_to": "center"
         }
@@ -2493,8 +2493,8 @@
     "orientation": "horizontal",
     "anchor_to": "top_right",
     "anchor_from": "top_right",
-    "size": [ "100%", 30 ],
-    "offset": [ "100%", "2px"],
+    "size": [ "100%", 25 ],
+    "offset": [ "100%", "0px"],
     "controls": [
       // {
       //   "navigation_tabs": {

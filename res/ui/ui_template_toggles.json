@@ -1,4 +1,4 @@
-//File modified by @CrizArtEX
+//File modified by @ToxesFoxes
 /********************************************************
 +*   (c) Mojang. All rights reserved                       *
 +*   (c) Microsoft. All rights reserved.                   *
@@ -77,7 +77,7 @@
     "$pressed_texture": "textures/gui/newgui/buttons/border/lightButtonhover", //Modified
     "$pressed_no_hover_texture": "textures/gui/newgui/buttons/border/lightButtonpressed", //Modified
 
-    "$default_color": [ 0.3, 0.3, 0.3 ],
+    "$default_color": [ 1, 1, 1 ],
     "$hover_color": [ 1, 1, 1 ],
     "$checked_image|default": "common.empty_panel",
     "$unchecked_image|default": "common.empty_panel",
@@ -182,7 +182,7 @@
     "$pressed_no_hover_texture": "textures/gui/newgui/buttons/border/lightpressed", //Modified
     "$locked_texture": "textures/gui/newgui/buttons/border/disabledButton", //Modified
 
-    "$default_color": [ 0.3, 0.3, 0.3 ],
+    "$default_color": [ 1, 1, 1 ],
     "$hover_color": [ 1, 1, 1 ],
     "$checked_image|default": "common.empty_panel",
     "$unchecked_image|default": "common.empty_panel",

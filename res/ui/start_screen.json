@@ -1,4 +1,4 @@
-//File modified by @CrizArtEX. Don´t steal the code design ;)
+//File modified by @ToxesFoxes. Don´t steal the code design ;)
 {
   "namespace": "start",
 
@@ -29,7 +29,7 @@
     "uv": [ 0, 0 ],
     "uv_size": [ 32, 16 ],
     "size": [ 32, 16 ],
-    "color": [ 0.3, 0.3, 0.3 ]
+    "color": [ 1, 1, 1 ]
   },
 
   "new_offers_icon": {
@@ -634,7 +634,7 @@
   // "bg": {
   //   "type": "image",
   //   "texture": "textures/gui/panorama",
-  //   "uv_size": [ 730, 365 ],
+  //   "uv_size": [ 730, 368 ],
   //   "uv": "@start.panorama_animation",
   //   "anchor_from": "center",
   //   "anchor_to": "center",

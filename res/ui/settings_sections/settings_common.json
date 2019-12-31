@@ -1,4 +1,4 @@
-//File modified by @CrizArtEX
+//File modified by @ToxesFoxes
 /********************************************************
 +*   (c) Mojang. All rights reserved                       *
 +*   (c) Microsoft. All rights reserved.                   *
@@ -197,7 +197,7 @@
     "$text_box_enabled_binding_name": "$option_enabled_binding_name",
     "enabled": "$enabled",
     "$place_holder_text": "$option_place_holder_text",
-    "$place_holder_text_color": [ 0.5, 0.5, 0.5, 1.0 ],
+    "$place_holder_text_color": [ 1, 1, 1, 1.0 ],
     "variables": [
       {
         "requires": "(not $option_enabled_binding_name or not $enabled)",
@@ -222,7 +222,7 @@
           "$text_box_enabled_binding_name": "$option_enabled_binding_name",
           "enabled": "$enabled",
           "$place_holder_text": "$option_place_holder_text",
-          "$place_holder_text_color": [ 0.5, 0.5, 0.5, 1.0 ],
+          "$place_holder_text_color": [ 1, 1, 1, 1.0 ],
           "variables": [
             {
               "requires": "(not $option_enabled_binding_name or not $enabled)",
@@ -924,7 +924,7 @@
   },
 
   "screen_base@settings_common.dynamic_dialog_screen": {
-    "$default_text_color": [ 0.275, 0.275, 0.275 ],
+    "$default_text_color": [ 0.8, 0.8, 0.8 ],
     "$active_text_color": [ 1.00, 1.00, 1.00 ],
     "$dialog_content": "settings_common.dialog_content"
   }
