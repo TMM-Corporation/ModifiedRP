@@ -1,0 +1,362 @@
+[
+    {
+        "name": "xbox_face_button_down",
+        "code": "0xE300"
+    },
+    {
+        "name": "xbox_face_button_right",
+        "code": "0xE301"
+    },
+    {
+        "name": "xbox_face_button_left",
+        "code": "0xE302"
+    },
+    {
+        "name": "xbox_face_button_up",
+        "code": "0xE303"
+    },
+    {
+        "name": "xbox_bumper_left",
+        "code": "0xE304"
+    },
+    {
+        "name": "xbox_bumper_right",
+        "code": "0xE305"
+    },
+    {
+        "name": "xbox_trigger_left",
+        "code": "0xE306"
+    },
+    {
+        "name": "xbox_trigger_right",
+        "code": "0xE307"
+    },
+    {
+        "name": "xbox_select",
+        "code": "0xE308"
+    },
+    {
+        "name": "xbox_start",
+        "code": "0xE309"
+    },
+    {
+        "name": "xbox_stick_left",
+        "code": "0xE30A"
+    },
+    {
+        "name": "xbox_stick_right",
+        "code": "0xE30B"
+    },
+    {
+        "name": "xbox_dpad_up",
+        "code": "0xE30C"
+    },
+    {
+        "name": "xbox_dpad_left",
+        "code": "0xE30D"
+    },
+    {
+        "name": "xbox_dpad_down",
+        "code": "0xE30E"
+    },
+    {
+        "name": "xbox_dpad_right",
+        "code": "0xE30F"
+    },
+    {
+        "name": "ps4_face_button_down",
+        "code": "0xE320"
+    },
+    {
+        "name": "ps4_face_button_right",
+        "code": "0xE321"
+    },
+    {
+        "name": "ps4_face_button_left",
+        "code": "0xE322"
+    },
+    {
+        "name": "ps4_face_button_up",
+        "code": "0xE323"
+    },
+    {
+        "name": "ps4_bumper_left",
+        "code": "0xE324"
+    },
+    {
+        "name": "ps4_bumper_right",
+        "code": "0xE325"
+    },
+    {
+        "name": "ps4_trigger_left",
+        "code": "0xE326"
+    },
+    {
+        "name": "ps4_trigger_right",
+        "code": "0xE327"
+    },
+    {
+        "name": "ps4_select",
+        "code": "0xE328"
+    },
+    {
+        "name": "ps4_start",
+        "code": "0xE329"
+    },
+    {
+        "name": "ps4_stick_left",
+        "code": "0xE32A"
+    },
+    {
+        "name": "ps4_stick_right",
+        "code": "0xE32B"
+    },
+    {
+        "name": "ps4_dpad_up",
+        "code": "0xE32C"
+    },
+    {
+        "name": "ps4_dpad_left",
+        "code": "0xE32D"
+    },
+    {
+        "name": "ps4_dpad_down",
+        "code": "0xE32E"
+    },
+    {
+        "name": "ps4_dpad_right",
+        "code": "0xE32F"
+    },
+    {
+        "name": "switch_face_button_down",
+        "code": "0xE340"
+    },
+    {
+        "name": "switch_face_button_right",
+        "code": "0xE341"
+    },
+    {
+        "name": "switch_face_button_left",
+        "code": "0xE342"
+    },
+    {
+        "name": "switch_face_button_up",
+        "code": "0xE343"
+    },
+    {
+        "name": "switch_bumper_left",
+        "code": "0xE344"
+    },
+    {
+        "name": "switch_bumper_right",
+        "code": "0xE345"
+    },
+    {
+        "name": "switch_trigger_left",
+        "code": "0xE346"
+    },
+    {
+        "name": "switch_trigger_right",
+        "code": "0xE347"
+    },
+    {
+        "name": "switch_select",
+        "code": "0xE348"
+    },
+    {
+        "name": "switch_start",
+        "code": "0xE349"
+    },
+    {
+        "name": "switch_stick_left",
+        "code": "0xE34A"
+    },
+    {
+        "name": "switch_stick_right",
+        "code": "0xE34B"
+    },
+    {
+        "name": "switch_dpad_up",
+        "code": "0xE34C"
+    },
+    {
+        "name": "switch_dpad_left",
+        "code": "0xE34D"
+    },
+    {
+        "name": "switch_dpad_down",
+        "code": "0xE34E"
+    },
+    {
+        "name": "switch_dpad_right",
+        "code": "0xE34F"
+    },
+    {
+        "name": "mouse_left_button",
+        "code": "0xE360"
+    },
+    {
+        "name": "mouse_right_button",
+        "code": "0xE361"
+    },
+    {
+        "name": "mouse_middle_button",
+        "code": "0xE362"
+    },
+    {
+        "name": "touch_forward",
+        "code": "0xE380"
+    },
+    {
+        "name": "touch_left",
+        "code": "0xE381"
+    },
+    {
+        "name": "touch_back",
+        "code": "0xE382"
+    },
+    {
+        "name": "touch_right",
+        "code": "0xE383"
+    },
+    {
+        "name": "touch_jump",
+        "code": "0xE384"
+    },
+    {
+        "name": "touch_sneak",
+        "code": "0xE385"
+    },
+    {
+        "name": "touch_fly_up",
+        "code": "0xE386"
+    },
+    {
+        "name": "touch_fly_down",
+        "code": "0xE387"
+    },
+    {
+        "name": "craftable_toggle_on",
+        "code": "0xE3A0"
+    },
+    {
+        "name": "craftable_toggle_off",
+        "code": "0xE3A1"
+    },
+    {
+        "name": "shank",
+        "code": "0xE100"
+    },
+    {
+        "name": "armor",
+        "code": "0xE101"
+    },
+    {
+        "name": "minecoin",
+        "code": "0xE102"
+    },
+    {
+        "name": "code_builder_button",
+        "code": "0xE103"
+    },
+    {
+        "name": "windowsmr_left_grab",
+        "code": "0xE3C0"
+    },
+    {
+        "name": "windowsmr_right_grab",
+        "code": "0xE3C1"
+    },
+    {
+        "name": "windowsmr_menu",
+        "code": "0xE3C2"
+    },
+    {
+        "name": "windowsmr_left_stick",
+        "code": "0xE3C3"
+    },
+    {
+        "name": "windowsmr_right_stick",
+        "code": "0xE3C4"
+    },
+    {
+        "name": "windowsmr_left_touchpad",
+        "code": "0xE3C5"
+    },
+    {
+        "name": "windowsmr_left_touchpad_horizontal",
+        "code": "0xE3C6"
+    },
+    {
+        "name": "windowsmr_left_touchpad_vertical",
+        "code": "0xE3C7"
+    },
+    {
+        "name": "windowsmr_right_touchpad",
+        "code": "0xE3C8"
+    },
+    {
+        "name": "windowsmr_right_touchpad_horizontal",
+        "code": "0xE3C9"
+    },
+    {
+        "name": "windowsmr_right_touchpad_vertical",
+        "code": "0xE3CA"
+    },
+    {
+        "name": "windowsmr_left_trigger",
+        "code": "0xE3CB"
+    },
+    {
+        "name": "windowsmr_right_trigger",
+        "code": "0xE3CC"
+    },
+    {
+        "name": "windowsmr_windows",
+        "code": "0xE3CD"
+    },
+    {
+        "name": "rift_0",
+        "code": "0xE3E3"
+    },
+    {
+        "name": "rift_A",
+        "code": "0xE3E1"
+    },
+    {
+        "name": "rift_B",
+        "code": "0xE3E2"
+    },
+    {
+        "name": "rift_left_grab",
+        "code": "0xE3E3"
+    },
+    {
+        "name": "rift_right_grab",
+        "code": "0xE3E4"
+    },
+    {
+        "name": "rift_left_stick",
+        "code": "0xE3E5"
+    },
+    {
+        "name": "rift_right_stick",
+        "code": "0xE3E6"
+    },
+    {
+        "name": "rift_left_trigger",
+        "code": "0xE3E7"
+    },
+    {
+        "name": "rift_right_trigger",
+        "code": "0xE3E8"
+    },
+    {
+        "name": "rift_X",
+        "code": "0xE3E9"
+    },
+    {
+        "name": "rift_Y",
+        "code": "0xE3EA"
+    }
+]

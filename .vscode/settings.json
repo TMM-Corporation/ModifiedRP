@@ -1,4 +1,3 @@
 {
-	"terminal.integrated.cwd": "C:\\Users\\toxes\\Documents\\GitHub\\ADBModPusher",
-	"terminal.integrated.shellArgs.windows": ["/K", "C:\\Users\\toxes\\Documents\\GitHub\\ADBModPusher\\pusher.bat"]
+	"terminal.integrated.shellArgs.windows": ["/K", "C:/Users/ToxesFoxes/Documents/GitHub/ADBModPusher/pusher.bat"]
 }
