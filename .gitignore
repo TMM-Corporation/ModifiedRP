@@ -2,3 +2,7 @@
 /.flag_auto_launch
 /.vscode
 /.vscode/settings.json
+/inner-core.log
+/log.txt
+/.gitignore
+.vscode/settings.json
