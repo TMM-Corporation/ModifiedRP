@@ -10,7 +10,7 @@ var sdcard = android.os.Environment.getExternalStorageDirectory()
 var Plist = {
 	manifest: __dir__.replace('innercore/mods/' + __name__ + '/', ''), //'manifest.json'
 	mods: __dir__.replace(__name__ + '/', ''),
-	startScreen: __dir__ + 'assets/RP/ModifiedRP/ui/' //'start_screen.json'
+	startScreen: __dir__ + 'resource_packs/ModifiedRP/ui/' //'start_screen.json'
 }
 
 function read(selectedFile) {

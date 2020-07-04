@@ -1,7 +1,7 @@
 {
 	"terminal.integrated.shellArgs.windows": [
 		"/K",
-		"C:/Users/ToxesFoxes/Documents/GitHub/ADBModPusher/pusher.bat"
+		"C:/Users/ToxesFoxes/Documents/GitHub/ModifiedRP/ADBMP/pusher.bat"
 	], 
 	"logFileHighlighter.customPatterns": [
     {

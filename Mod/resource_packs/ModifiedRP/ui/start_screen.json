@@ -1,0 +1,310 @@
+{
+	"namespace": "start",
+	"copyright": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "layer": 1,
+    "shadow": true,
+    "text": "© Mojang AB\nCreated By TMM",
+    "size": [ "default", "default" ],
+    "max_size": [ "default", "default" ],
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left"
+  },
+  "version": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "layer": 2,
+    "text": "#version",
+    "size": [ "default", "default" ],
+    "max_size": [ "default", "default" ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right"
+  },
+  "development_version": {
+    "type": "label",
+    "color": "$main_header_text_color",
+    "layer": 2,
+    "text": "",
+    "size": [ "default", "default" ],
+    "max_size": [ "100%", "100%" ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle"
+  },
+  "text_panel": {
+    "type": "panel",
+    "size": [ "100%-2px", "default" ],
+    "offset": [ 0, -1 ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "controls": [
+      {
+        "copyright@start.copyright": {}
+      },
+      {
+        "development_version@start.development_version": {}
+      },
+      {
+        "version@start.version": {}
+      }
+    ]
+  },
+  "xbl_signin_button@common_buttons.light_text_form_fitting_button": {
+    "ignored": true
+  },
+  "online_buttons_panel": {
+    "controls": [
+      {
+        "stacked_column": {
+          "controls": [
+            {
+              "xbl_btn@start.column_frame": {
+                "ignored": true
+              }
+            },
+            {
+              "nx_signin_btn@start.column_frame": {
+                "ignored": true
+              }
+            },
+            {
+              "signingin": {
+                "ignored": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stacked_row": {
+    "type": "panel",
+    "size": [ "100%", 26 ]
+  },
+  "main_button@common_buttons.light_text_button": {
+    "size": [ "100%", 24 ]
+  },
+  "exit_button@main_button": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.exit"
+  },
+  "store_button@start.main_button": {
+    "$pressed_button_name": "button.menu_store",
+    "$button_text": "menu.store",
+    "$button_content": "start.store_button_content",
+    "$button_text_binding_type": "none",
+    "$button_binding_condition": "none",
+    "$button_text_grid_collection_name": "",
+    "tts_inherit_siblings": true
+  },
+  "horizontal_padding": {
+    "type": "panel",
+    "size": [ 2, 0 ]
+  },
+  "main_buttons_panel": {
+    "type": "panel",
+    "size": [ 150, "100%c" ],
+    "controls": [
+      {
+        "stacked_rows": {
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "controls": [
+            {
+              "play_buttons": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [ "100%", 24 ],
+                "controls": [
+                  { 
+                    "play_button@start.play_button": {
+                      "size": [ "fill", "100%" ]
+                    }
+                  },
+                  { "padding_0@start.horizontal_padding": { } },
+                  {
+                    "quick_play_button@start.quick_play_button": {
+                      "ignored": false,
+                      "size": [ "50%", "100%" ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "stacked_row_1@start.stacked_row": {
+                // "ignored": "$achievements_ignored",
+                "ignored": true,
+                "controls": [
+                  { "achievements_button@start.achievements_button": {} }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#achievements_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "stacked_row_2@start.stacked_row": {
+                "ignored": "(not $trial)",
+                "controls": [
+                  {
+                    "stacked_columns": {
+                      "type": "stack_panel",
+                      "size": [ "100%", "100%" ],
+                      "orientation": "horizontal",
+                      "controls": [
+                        {
+                          "stacked_col_0": {
+                            "type": "panel",
+                            "size": [ "fill", "100%" ],
+                            "controls": [
+                              {
+                                "store_button@start.store_button": {
+                                  "enabled": "(not $store_disabled)"
+                                }
+                              },
+                              {
+                                "update_icon@start.update_prompt_icon": {
+                                  "ignored": true,
+                                  "size": [ "52.38%y", 15 ],
+                                  "offset": [ -16, -6 ],
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#update_icon_visible",
+                                      "binding_name_override": "#visible",
+                                      "binding_condition": "always"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "new_offers_icon@start.new_offers_icon": {
+                                  "ignored": true,
+                                  "offset": [ 8, -6 ],
+                                  "anchor_from": "top_right",
+                                  "anchor_to": "top_right",
+                                  "bindings": [
+                                    {
+                                      "binding_name": "#new_offers",
+                                      "binding_name_override": "#visible"
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "stacked_col_1": {
+                            "type": "panel",
+                            "size": [ "fill", "100%" ],
+                            "ignored": "($store_ignored)",
+                            "controls": [
+                              { "settings_button@start.settings_button": {} }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "library@start.stacked_row": {
+                "ignored": true,
+                "controls": [
+                  { "padding_1@start.horizontal_padding": { } },
+                  { "library_button@start.library_button": {} },
+                  {
+                    "beta_icon@start.beta_icon": {
+                      "ignored": false,
+                      "offset": [ 8, -6 ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "store@start.stacked_row": {
+                "ignored": "(($trial) or ($store_ignored))",
+                "controls": [
+                  {
+                    "store_button@start.store_button": {
+                      "enabled": "(not $store_disabled)"
+                    }
+                  },
+                  {
+                    "update_icon@start.update_prompt_icon": {
+                      "ignored": true,
+                      "size": [ "52.38%y", 15 ],
+                      "offset": [ -16, -6 ],
+                      "bindings": [
+                        {
+                          "binding_name": "#update_icon_visible",
+                          "binding_name_override": "#visible",
+                          "binding_condition": "always"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "new_offers_icon@start.new_offers_icon": {
+                      "ignored": true,
+                      "offset": [ 8, -6 ],
+                      "anchor_from": "top_right",
+                      "anchor_to": "top_right",
+                      "bindings": [
+                        {
+                          "binding_name": "#new_offers",
+                          "binding_name_override": "#visible"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "settings@start.stacked_row": {
+                "ignored": "$trial",
+                "controls": [
+                  { "settings_button@start.settings_button": {} }
+                ]
+              }
+            },
+            {
+              "buy_game@start.stacked_row": {
+                "controls": [
+                  { "buy_game_button@start.buy_game_button": {} }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#trial_game_mode",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "exit@start.stacked_row": {
+                "controls": [
+                  { "exit@start.exit_button": { } }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
