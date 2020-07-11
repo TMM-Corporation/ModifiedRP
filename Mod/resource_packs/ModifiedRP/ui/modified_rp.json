@@ -1,0 +1,128 @@
+{
+	"namespace": "mrp",
+	"vertical_padding": {
+		"type": "panel",
+		"size": [ "100%", "4px" ]
+	},
+	"horizontal_padding": {
+		"type": "panel",
+		"size": [ "4px", "100%" ]
+	},
+  "black_image": {
+    "type": "image",
+    "texture": "textures/ui/Black"
+  },
+  "gray_image": {
+    "type": "image",
+    "texture": "textures/ui/Gray"
+  },
+	"panel_bg": {
+		"type": "panel",
+    "controls": [
+      {
+				"black_background@resource_packs.black_image": { 
+					"layer": 0
+				}
+			},
+      {
+        "gray@resource_packs.gray_image": {
+          "size": [ "100%-2px", "100%-2px" ],
+          "layer": 1
+        }
+      }
+    ]
+	},
+	
+	"mod_pane": {
+		"type": "panel",
+		"size": [ "100%", 54 ],
+		"$icon_size|default": [ 48, 48 ],
+		"$icon_texture|default": "textures/ui/mod_icons/mod_no_icon",
+		"$mod_name|default": "Mod Name",
+		"$mod_author|default": "",
+		"$mod_version|default": "",
+		"controls": [
+			{ 
+				"mod_main_pane":{
+					"type": "stack_panel",
+					"orientation": "horizontal",
+					"controls": [
+						{ "hp0@mrp.horizontal_padding": {} },
+						{
+							"left": {
+								"type": "panel",
+								"layer": 2,
+								"size": [ 48, "100%" ],
+								"controls": [
+									{
+										"icon": { "type": "image", "size": "$icon_size", "texture": "$icon_texture"}
+									}
+								]
+							}
+						},
+						{ "hp1@mrp.horizontal_padding": { "size": [ "12px", "default" ] } },
+						{
+							"right": {
+								"type": "stack_panel",
+								"size": [ "100%", "15px" ],
+								"anchor_from": "left_middle",
+								"anchor_to": "left_middle",
+								"layer": 2,
+								"controls": [
+									{ "hp3@mrp.horizontal_padding": {} },
+									{
+										"name_ver": {
+											"type": "stack_panel",
+											"orientation": "horizontal",
+											"controls": [
+												{
+													"name": {
+														"type": "label",
+														"font_scale_factor": 1.2 ,
+														"text": "$mod_name"
+													}
+												},
+												{ "hp4@mrp.horizontal_padding": {} },
+												{
+													"version": {
+														"type": "label",
+														"font_scale_factor": 0.8 ,
+														"text": "$mod_version"
+													}
+												}
+											]
+										}
+									},
+									{
+										"author": {
+										"type": "label",
+										"font_scale_factor": 1 ,
+										"text": "$mod_author"
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			}
+		]
+	},
+	"dlg_panel": {
+		"type": "stack_panel",
+		"orientation": "vertical",
+		"size": [ "100%" , "100%c" ],
+		"controls": []
+	},
+	"dlg_scroll@common.scrolling_panel": {
+		"offset": [ 2, 0 ],
+		"size":[ "100%-8px", "100%" ],
+		"$show_background": false,
+		"$scrolling_content": "mrp.dlg_panel"
+	},
+	"dlg@common_dialogs.main_panel_no_buttons": {
+		"size":["80%","80%"],
+		"$text_name":"Installed Mods",
+		"$child_control":"mrp.dlg_scroll"
+	}
+}

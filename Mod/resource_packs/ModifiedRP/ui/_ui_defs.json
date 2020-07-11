@@ -3,6 +3,7 @@
     "ui_defs": [
       "ui/chat_screen.json",
       "ui/command_block_screen.json",
+      "ui/modified_rp.json",
       "ui/pause_screen.json",
       "ui/start_screen.json",
       "ui/startup_screen.json"

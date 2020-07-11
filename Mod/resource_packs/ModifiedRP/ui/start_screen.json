@@ -21,16 +21,19 @@
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right"
   },
-  "development_version": {
-    "type": "label",
-    "color": "$main_header_text_color",
-    "layer": 2,
-    "text": "",
-    "size": [ "default", "default" ],
-    "max_size": [ "100%", "100%" ],
-    "anchor_from": "bottom_middle",
-    "anchor_to": "bottom_middle"
+  "development_version@mrp.copyright": {
+  
   },
+  // "development_version": {
+  //   "type": "label",
+  //   "color": "$main_header_text_color",
+  //   "layer": 2,
+  //   "text": "",
+  //   "size": [ "default", "default" ],
+  //   "max_size": [ "100%", "100%" ],
+  //   "anchor_from": "bottom_middle",
+  //   "anchor_to": "bottom_middle"
+  // },
   "text_panel": {
     "type": "panel",
     "size": [ "100%-2px", "default" ],
@@ -88,6 +91,10 @@
     "$pressed_button_name": "button.menu_exit",
     "$button_text": "gui.exit"
   },
+  "mod_btn@main_button": {
+		"$pressed_button_name": "button.menu_buy_game",
+    "$button_text": "Mods"
+  },
   "store_button@start.main_button": {
     "$pressed_button_name": "button.menu_store",
     "$button_text": "menu.store",
@@ -120,7 +127,7 @@
                 "anchor_to": "top_middle",
                 "size": [ "100%", 24 ],
                 "controls": [
-                  { 
+                  {
                     "play_button@start.play_button": {
                       "size": [ "fill", "100%" ]
                     }
@@ -139,7 +146,6 @@
             },
             {
               "stacked_row_1@start.stacked_row": {
-                // "ignored": "$achievements_ignored",
                 "ignored": true,
                 "controls": [
                   { "achievements_button@start.achievements_button": {} }
@@ -275,22 +281,24 @@
               }
             },
             {
-              "settings@start.stacked_row": {
-                "ignored": "$trial",
+              "settings_mods": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "size": [ "100%", 24 ],
                 "controls": [
-                  { "settings_button@start.settings_button": {} }
-                ]
-              }
-            },
-            {
-              "buy_game@start.stacked_row": {
-                "controls": [
-                  { "buy_game_button@start.buy_game_button": {} }
-                ],
-                "bindings": [
                   {
-                    "binding_name": "#trial_game_mode",
-                    "binding_name_override": "#visible"
+                    "mods@start.mod_btn": {
+                      "ignored": false,
+                      "size": [ "50%", "100%" ]
+                    }
+                  },
+                  { "padding_0@start.horizontal_padding": { } },
+                  {
+                    "settings_button@start.settings_button": {
+                      "size": [ "fill", "100%" ]
+                    }
                   }
                 ]
               }

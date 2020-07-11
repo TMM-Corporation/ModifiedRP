@@ -1,6 +1,6 @@
 {
   "namespace": "pause",
-  
+ 
   "menu_background@pause.transparent_background": {
     "size": [ "100% - 2px", "100%c + 8px" ],
     "anchor_from": "center",
@@ -29,10 +29,10 @@
                 "orientation": "horizontal",
                 "size": [ "100%", 28 ],
                 "controls": [
-                  { 
+                  {
                     "settings_button@pause.settings_button": {
                       "size": [ "fill", "100%" ]
-                    } 
+                    }
                   },
                   { "settings@pause.horizontal_padding": {} },
                   {
@@ -55,10 +55,10 @@
                 "bindings": [ ]
               }
             },
-            { 
+            {
               "feedback_button@pause.feedback_button": {
                 "ignored": true
-              } 
+              }
             },
             { "how_to_play@pause.vertical_padding": {} },
             { "quit_button@pause.quit_button": {} }

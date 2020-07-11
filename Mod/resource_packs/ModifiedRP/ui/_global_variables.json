@@ -1,4 +1,4 @@
-{ 
+{
   // 0.3
   "$light_button_default_text_color": [ 1.0, 1.0, 1.0 ],
   "$light_toggle_default_text_color": [ 1.0, 1.0, 1.0 ],

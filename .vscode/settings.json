@@ -1,8 +1,16 @@
 {
+    "json.schemas": [
+		{
+			"fileMatch": [
+				"*/ui/*.json"
+			],
+			"url": "https://aexer0e.github.io/bedrock-schema/"
+		}
+	],
 	"terminal.integrated.shellArgs.windows": [
 		"/K",
 		"C:/Users/ToxesFoxes/Documents/GitHub/ModifiedRP/ADBMP/pusher.bat"
-	], 
+	],
 	"logFileHighlighter.customPatterns": [
     {
         "pattern": "(?!\\[.*\\])[0-9]{0,} ms",
