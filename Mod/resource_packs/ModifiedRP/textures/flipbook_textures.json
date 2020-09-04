@@ -358,6 +358,11 @@
     "atlas_tile": "campfire_fire",
     "ticks_per_frame": 2
   },
+  { 
+    "flipbook_texture": "textures/blocks/lantern",
+    "atlas_tile": "lantern",
+    "ticks_per_frame": 8
+  },
   {
     "flipbook_texture": "textures/blocks/stonecutter2_saw",
     "atlas_tile": "stonecutter2_saw",
@@ -371,48 +376,57 @@
     "ticks_per_frame": 8
   },
   {
-    "flipbook_texture": "textures/items/diamond",
-    "atlas_tile": "diamond",
-    "frames": [  0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8 ],
-    "ticks_per_frame": 1
+    "flipbook_texture": "textures/blocks/vanilla/beacon",
+    "atlas_tile": "beacon",
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7 ],
+    "ticks_per_frame": 4
   },
   {
-    "flipbook_texture": "textures/items/emerald",
-    "atlas_tile": "emerald",
-    "frames": [  0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8 ],
-    "ticks_per_frame": 1
+    "flipbook_texture": "textures/blocks/vanilla/deadbush",
+    "atlas_tile": "deadbush",
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
+    "ticks_per_frame": 6
   },
   {
-    "flipbook_texture": "textures/items/gold_ingot",
-    "atlas_tile": "gold_ingot",
-    "frames": [  0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8 ],
-    "ticks_per_frame": 1
+    "flipbook_texture": "textures/blocks/vanilla/enchanting_table_bottom",
+    "atlas_tile": "enchanting_table_bottom",
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+    "ticks_per_frame": 4
   },
   {
-    "flipbook_texture": "textures/items/iron_ingot",
-    "atlas_tile": "iron_ingot",
-    "frames": [  0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8 ],
-    "ticks_per_frame": 1
+    "flipbook_texture": "textures/blocks/vanilla/enchanting_table_side",
+    "atlas_tile": "enchanting_table_side",
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+    "ticks_per_frame": 4
   },
   {
-    "flipbook_texture": "textures/items/fire_charge",
-    "atlas_tile": "fire_charge",
+    "flipbook_texture": "textures/blocks/vanilla/rail_activator_powered",
+    "atlas_tile": "rail_activator_powered",
+    "frames": [ 0, 1, 2, 3, 4 ],
+    "ticks_per_frame": 8
+  },
+  {
+    "flipbook_texture": "textures/blocks/vanilla/rail_detector_powered",
+    "atlas_tile": "rail_detector_powered",
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18 ],
     "ticks_per_frame": 2
   },
   {
-    "flipbook_texture": "textures/items/lantern",
-    "atlas_tile": "lantern",
-    "ticks_per_frame": 5
+    "flipbook_texture": "textures/blocks/vanilla/rail_golden_powered",
+    "atlas_tile": "rail_golden_powered",
+    "frames": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
+    "ticks_per_frame": 4
   },
   {
-    "flipbook_texture": "textures/items/tipped_arrow_head",
-    "atlas_tile": "tipped_arrow_head",
-    "ticks_per_frame": 2
+    "flipbook_texture": "textures/blocks/vanilla/redstone_torch_on",
+    "atlas_tile": "redstone_torch_on",
+    "frames": [ 0, 1, 2, 3 ],
+    "ticks_per_frame": 8
   },
   {
-    "flipbook_texture": "textures/items/totem_of_undying",
-    "atlas_tile": "totem_of_undying",
-    "frames": [ 0, 1, 2, 3, 3, 3, 3, 4, 5, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 9, 10, 11, 12, 13, 8, 9, 10, 11, 12, 13, 8, 9, 10, 11, 12, 13, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7 ],
-    "ticks_per_frame": 1
+    "flipbook_texture": "textures/blocks/vanilla/repeater_on",
+    "atlas_tile": "repeater_on",
+    "frames": [ 0, 1, 2, 3, 4, 5 ],
+    "ticks_per_frame": 8
   }
 ]
