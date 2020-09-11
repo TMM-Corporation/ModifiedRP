@@ -1,247 +1,255 @@
 [
     {
         "name": "xbox_face_button_down",
-        "code": "0xE300"
+        "code": "0xE000"
     },
     {
         "name": "xbox_face_button_right",
-        "code": "0xE301"
+        "code": "0xE001"
     },
     {
         "name": "xbox_face_button_left",
-        "code": "0xE302"
+        "code": "0xE002"
     },
     {
         "name": "xbox_face_button_up",
-        "code": "0xE303"
+        "code": "0xE003"
     },
     {
         "name": "xbox_bumper_left",
-        "code": "0xE304"
+        "code": "0xE004"
     },
     {
         "name": "xbox_bumper_right",
-        "code": "0xE305"
+        "code": "0xE005"
     },
     {
         "name": "xbox_trigger_left",
-        "code": "0xE306"
+        "code": "0xE006"
     },
     {
         "name": "xbox_trigger_right",
-        "code": "0xE307"
+        "code": "0xE007"
     },
     {
         "name": "xbox_select",
-        "code": "0xE308"
+        "code": "0xE008"
     },
     {
         "name": "xbox_start",
-        "code": "0xE309"
+        "code": "0xE009"
     },
     {
         "name": "xbox_stick_left",
-        "code": "0xE30A"
+        "code": "0xE00A"
     },
     {
         "name": "xbox_stick_right",
-        "code": "0xE30B"
+        "code": "0xE00B"
     },
     {
         "name": "xbox_dpad_up",
-        "code": "0xE30C"
+        "code": "0xE00C"
     },
     {
         "name": "xbox_dpad_left",
-        "code": "0xE30D"
+        "code": "0xE00D"
     },
     {
         "name": "xbox_dpad_down",
-        "code": "0xE30E"
+        "code": "0xE00E"
     },
     {
         "name": "xbox_dpad_right",
-        "code": "0xE30F"
+        "code": "0xE00F"
     },
     {
         "name": "ps4_face_button_down",
-        "code": "0xE320"
+        "code": "0xE020"
     },
     {
         "name": "ps4_face_button_right",
-        "code": "0xE321"
+        "code": "0xE021"
     },
     {
         "name": "ps4_face_button_left",
-        "code": "0xE322"
+        "code": "0xE022"
     },
     {
         "name": "ps4_face_button_up",
-        "code": "0xE323"
+        "code": "0xE023"
     },
     {
         "name": "ps4_bumper_left",
-        "code": "0xE324"
+        "code": "0xE024"
     },
     {
         "name": "ps4_bumper_right",
-        "code": "0xE325"
+        "code": "0xE025"
     },
     {
         "name": "ps4_trigger_left",
-        "code": "0xE326"
+        "code": "0xE026"
     },
     {
         "name": "ps4_trigger_right",
-        "code": "0xE327"
+        "code": "0xE027"
     },
     {
         "name": "ps4_select",
-        "code": "0xE328"
+        "code": "0xE028"
     },
     {
         "name": "ps4_start",
-        "code": "0xE329"
+        "code": "0xE029"
     },
     {
         "name": "ps4_stick_left",
-        "code": "0xE32A"
+        "code": "0xE02A"
     },
     {
         "name": "ps4_stick_right",
-        "code": "0xE32B"
+        "code": "0xE02B"
     },
     {
         "name": "ps4_dpad_up",
-        "code": "0xE32C"
+        "code": "0xE02C"
     },
     {
         "name": "ps4_dpad_left",
-        "code": "0xE32D"
+        "code": "0xE02D"
     },
     {
         "name": "ps4_dpad_down",
-        "code": "0xE32E"
+        "code": "0xE02E"
     },
     {
         "name": "ps4_dpad_right",
-        "code": "0xE32F"
+        "code": "0xE02F"
     },
     {
         "name": "switch_face_button_down",
-        "code": "0xE340"
+        "code": "0xE040"
     },
     {
         "name": "switch_face_button_right",
-        "code": "0xE341"
+        "code": "0xE041"
     },
     {
         "name": "switch_face_button_left",
-        "code": "0xE342"
+        "code": "0xE042"
     },
     {
         "name": "switch_face_button_up",
-        "code": "0xE343"
+        "code": "0xE043"
     },
     {
         "name": "switch_bumper_left",
-        "code": "0xE344"
+        "code": "0xE044"
     },
     {
         "name": "switch_bumper_right",
-        "code": "0xE345"
+        "code": "0xE045"
     },
     {
         "name": "switch_trigger_left",
-        "code": "0xE346"
+        "code": "0xE046"
     },
     {
         "name": "switch_trigger_right",
-        "code": "0xE347"
+        "code": "0xE047"
     },
     {
         "name": "switch_select",
-        "code": "0xE348"
+        "code": "0xE048"
     },
     {
         "name": "switch_start",
-        "code": "0xE349"
+        "code": "0xE049"
     },
     {
         "name": "switch_stick_left",
-        "code": "0xE34A"
+        "code": "0xE04A"
     },
     {
         "name": "switch_stick_right",
-        "code": "0xE34B"
+        "code": "0xE04B"
     },
     {
         "name": "switch_dpad_up",
-        "code": "0xE34C"
+        "code": "0xE04C"
     },
     {
         "name": "switch_dpad_left",
-        "code": "0xE34D"
+        "code": "0xE04D"
     },
     {
         "name": "switch_dpad_down",
-        "code": "0xE34E"
+        "code": "0xE04E"
     },
     {
         "name": "switch_dpad_right",
-        "code": "0xE34F"
+        "code": "0xE04F"
     },
     {
         "name": "mouse_left_button",
-        "code": "0xE360"
+        "code": "0xE060"
     },
     {
         "name": "mouse_right_button",
-        "code": "0xE361"
+        "code": "0xE061"
     },
     {
         "name": "mouse_middle_button",
-        "code": "0xE362"
+        "code": "0xE062"
+    },
+    {
+        "name": "hunger_0",
+        "code": "0xE063"
+    },
+    {
+        "name": "hunger_1",
+        "code": "0xE064"
     },
     {
         "name": "touch_forward",
-        "code": "0xE380"
+        "code": "0xE080"
     },
     {
         "name": "touch_left",
-        "code": "0xE381"
+        "code": "0xE081"
     },
     {
         "name": "touch_back",
-        "code": "0xE382"
+        "code": "0xE082"
     },
     {
         "name": "touch_right",
-        "code": "0xE383"
+        "code": "0xE083"
     },
     {
         "name": "touch_jump",
-        "code": "0xE384"
+        "code": "0xE084"
     },
     {
         "name": "touch_sneak",
-        "code": "0xE385"
+        "code": "0xE085"
     },
     {
         "name": "touch_fly_up",
-        "code": "0xE386"
+        "code": "0xE086"
     },
     {
         "name": "touch_fly_down",
-        "code": "0xE387"
+        "code": "0xE087"
     },
     {
         "name": "craftable_toggle_on",
-        "code": "0xE3A0"
+        "code": "0xE0A0"
     },
     {
         "name": "craftable_toggle_off",
-        "code": "0xE3A1"
+        "code": "0xE0A1"
     },
     {
         "name": "shank",
@@ -261,102 +269,102 @@
     },
     {
         "name": "windowsmr_left_grab",
-        "code": "0xE3C0"
+        "code": "0xE0C0"
     },
     {
         "name": "windowsmr_right_grab",
-        "code": "0xE3C1"
+        "code": "0xE0C1"
     },
     {
         "name": "windowsmr_menu",
-        "code": "0xE3C2"
+        "code": "0xE0C2"
     },
     {
         "name": "windowsmr_left_stick",
-        "code": "0xE3C3"
+        "code": "0xE0C3"
     },
     {
         "name": "windowsmr_right_stick",
-        "code": "0xE3C4"
+        "code": "0xE0C4"
     },
     {
         "name": "windowsmr_left_touchpad",
-        "code": "0xE3C5"
+        "code": "0xE0C5"
     },
     {
         "name": "windowsmr_left_touchpad_horizontal",
-        "code": "0xE3C6"
+        "code": "0xE0C6"
     },
     {
         "name": "windowsmr_left_touchpad_vertical",
-        "code": "0xE3C7"
+        "code": "0xE0C7"
     },
     {
         "name": "windowsmr_right_touchpad",
-        "code": "0xE3C8"
+        "code": "0xE0C8"
     },
     {
         "name": "windowsmr_right_touchpad_horizontal",
-        "code": "0xE3C9"
+        "code": "0xE0C9"
     },
     {
         "name": "windowsmr_right_touchpad_vertical",
-        "code": "0xE3CA"
+        "code": "0xE0CA"
     },
     {
         "name": "windowsmr_left_trigger",
-        "code": "0xE3CB"
+        "code": "0xE0CB"
     },
     {
         "name": "windowsmr_right_trigger",
-        "code": "0xE3CC"
+        "code": "0xE0CC"
     },
     {
         "name": "windowsmr_windows",
-        "code": "0xE3CD"
+        "code": "0xE0CD"
     },
     {
         "name": "rift_0",
-        "code": "0xE3E3"
+        "code": "0xE0E0"
     },
     {
         "name": "rift_A",
-        "code": "0xE3E1"
+        "code": "0xE0E1"
     },
     {
         "name": "rift_B",
-        "code": "0xE3E2"
+        "code": "0xE0E2"
     },
     {
         "name": "rift_left_grab",
-        "code": "0xE3E3"
+        "code": "0xE0E3"
     },
     {
         "name": "rift_right_grab",
-        "code": "0xE3E4"
+        "code": "0xE0E4"
     },
     {
         "name": "rift_left_stick",
-        "code": "0xE3E5"
+        "code": "0xE0E5"
     },
     {
         "name": "rift_right_stick",
-        "code": "0xE3E6"
+        "code": "0xE0E6"
     },
     {
         "name": "rift_left_trigger",
-        "code": "0xE3E7"
+        "code": "0xE0E7"
     },
     {
         "name": "rift_right_trigger",
-        "code": "0xE3E8"
+        "code": "0xE0E8"
     },
     {
         "name": "rift_X",
-        "code": "0xE3E9"
+        "code": "0xE0E9"
     },
     {
         "name": "rift_Y",
-        "code": "0xE3EA"
+        "code": "0xE0EA"
     }
 ]

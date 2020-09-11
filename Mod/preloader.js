@@ -27,7 +27,7 @@ function ReWrite(selectedFile, text_) {
 	let writeFOS = new java.io.FileOutputStream(selectedFile)
 	writeFOS.write(new java.lang.String(text_).getBytes())
 }
-function copy(src, dst){
+function copy(src, dst) {
 	/*
 	private static void copyFileUsingChannel(File source, File dest) throws IOException {
     FileChannel sourceChannel = null;
@@ -70,17 +70,17 @@ function GetEnabledMods() {
 		let modInfo = ReadJSON(Select(Plist.mods + list[i], 'mod.info'))
 		if (modCfg.enabled == true)
 			count++
-			let modTexture = (modInfo.name.replace(' ', '_'))
-			if (!copy(Plist.mods + list[i]+'/mod_icon.png', __dir__+'resource_packs/ModifiedRP/textures/ui/mod_icons/'+modTexture+'.png'))
-				modTexture = 'mod_no_icon'
-			modified_rp.dlg_panel.controls.push({
-				"mod@mrp.mod_pane": {
-					"$icon_texture": "textures/ui/mod_icons/" + modTexture,
-					"$mod_name": modInfo.name,
-					"$mod_author": modInfo.author,
-					"$mod_version": modInfo.version
-				}
-			})
+		let modTexture = (modInfo.name.replace(' ', '_'))
+		if (!copy(Plist.mods + list[i] + '/mod_icon.png', __dir__ + 'resource_packs/ModifiedRP/textures/ui/mod_icons/' + modTexture + '.png'))
+			modTexture = 'mod_no_icon'
+		modified_rp.dlg_panel.controls.push({
+			"mod@mrp.mod_pane": {
+				"$icon_texture": "textures/ui/mod_icons/" + modTexture,
+				"$mod_name": modInfo.name,
+				"$mod_author": modInfo.author,
+				"$mod_version": modInfo.version
+			}
+		})
 	}
 	return count
 }
@@ -94,13 +94,17 @@ function WriteJSON(selectedFile, json) {
 }
 // Selecting Files
 var start_screenFILE = Select(Plist.ui, 'start_screen.json')
+var varlistFILE = Select(Plist.ui, '_global_variables.json')
 var modified_rpFILE = Select(Plist.ui, 'modified_rp.json')
 var manifestFILE = Select(Plist.manifest, 'manifest.json')
 // Reading Json files
 var manifest = ReadJSON(manifestFILE)
 var start_screen = ReadJSON(start_screenFILE)
+var varlist = ReadJSON(start_screenFILE)
 var modified_rp = ReadJSON(modified_rpFILE)
 // Changing data
+varlist["$mods_ignored"] = false
+varlist["$quickplay_ignored"] = false
 modified_rp.dlg_panel.controls = []
 let count = GetEnabledMods()
 start_screen.copyright.text = ('IC ' + manifest.packVersion + '\n') + (count + (count != 1 ? ' mods' : ' mod') + ' loaded') + '\nCopyright © Mojang AB'
@@ -108,4 +112,5 @@ start_screen.copyright.text = ('IC ' + manifest.packVersion + '\n') + (count + (
 // start_screen.development_version.text = 'manifest.pack + ' #' + manifest.packVersionCode + ' ' + manifest.packVersion'
 // Writing data
 WriteJSON(start_screenFILE, start_screen)
+WriteJSON(varlistFILE, varlist)
 WriteJSON(modified_rpFILE, modified_rp)

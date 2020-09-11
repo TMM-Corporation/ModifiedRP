@@ -1,5 +1,6 @@
 {
-	"namespace": "start",
+  "namespace": "start",
+  
 	"copyright": {
     "type": "label",
     "color": "$main_header_text_color",
@@ -93,7 +94,8 @@
   },
   "mod_btn@main_button": {
 		"$pressed_button_name": "button.menu_buy_game",
-    "$button_text": "Mods"
+    "$button_text": "Mods",
+    "ignored": "$mods_ignored"
   },
   "store_button@start.main_button": {
     "$pressed_button_name": "button.menu_store",
@@ -132,10 +134,14 @@
                       "size": [ "fill", "100%" ]
                     }
                   },
-                  { "padding_0@start.horizontal_padding": { } },
+                  { 
+                    "padding_0@start.horizontal_padding": { 
+                      "ignored": "$quickplay_ignored"
+                    } 
+                  },
                   {
                     "quick_play_button@start.quick_play_button": {
-                      "ignored": false,
+                      "ignored": "$quickplay_ignored",
                       "size": [ "50%", "100%" ],
                       "anchor_from": "top_left",
                       "anchor_to": "top_left"
@@ -290,11 +296,14 @@
                 "controls": [
                   {
                     "mods@start.mod_btn": {
-                      "ignored": false,
                       "size": [ "50%", "100%" ]
                     }
                   },
-                  { "padding_0@start.horizontal_padding": { } },
+                  { 
+                    "padding_0@start.horizontal_padding": { 
+                      "ignored": "$mods_ignored"
+                    } 
+                  },
                   {
                     "settings_button@start.settings_button": {
                       "size": [ "fill", "100%" ]
