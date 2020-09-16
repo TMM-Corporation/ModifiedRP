@@ -22,19 +22,7 @@
     "anchor_from": "bottom_right",
     "anchor_to": "bottom_right"
   },
-  "development_version@mrp.copyright": {
-  
-  },
-  // "development_version": {
-  //   "type": "label",
-  //   "color": "$main_header_text_color",
-  //   "layer": 2,
-  //   "text": "",
-  //   "size": [ "default", "default" ],
-  //   "max_size": [ "100%", "100%" ],
-  //   "anchor_from": "bottom_middle",
-  //   "anchor_to": "bottom_middle"
-  // },
+  "development_version@mrp.copyright": {},
   "text_panel": {
     "type": "panel",
     "size": [ "100%-2px", "default" ],
@@ -113,6 +101,8 @@
   "main_buttons_panel": {
     "type": "panel",
     "size": [ 150, "100%c" ],
+    "$mods_ignored": true,
+    "$quickplay_ignored": true,
     "controls": [
       {
         "stacked_rows": {
