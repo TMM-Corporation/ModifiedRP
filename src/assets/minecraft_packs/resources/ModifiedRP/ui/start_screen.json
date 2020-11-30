@@ -1,0 +1,395 @@
+{
+    "namespace": "start",
+    "copyright@mrp.copyright": {},
+    "version@mrp.version": {},
+    "development_version@mrp.dev_info": {},
+    "text_panel": {
+        "type": "panel",
+        "size": [
+            "100%-2px",
+            "default"
+        ],
+        "offset": [
+            0,
+            -1
+        ],
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "controls": [
+            {
+                "copyright@start.copyright": {}
+            },
+            {
+                "development_version@start.development_version": {}
+            },
+            {
+                "version@start.version": {}
+            }
+        ]
+    },
+    "xbl_signin_button@common_buttons.light_text_form_fitting_button": {
+        "ignored": true
+    },
+    "online_buttons_panel": {
+        "controls": [
+            {
+                "stacked_column": {
+                    "controls": [
+                        {
+                            "xbl_btn@start.column_frame": {
+                                "ignored": true
+                            }
+                        },
+                        {
+                            "nx_signin_btn@start.column_frame": {
+                                "ignored": true
+                            }
+                        },
+                        {
+                            "signingin": {
+                                "ignored": true
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "stacked_row": {
+        "type": "panel",
+        "size": [
+            "100%",
+            26
+        ]
+    },
+    "main_button@common_buttons.light_text_button": {
+        "size": [
+            "100%",
+            24
+        ]
+    },
+    "achievements_button@pause.achievements_button": {
+        "size": [
+            "100%",
+            24
+        ]
+    },
+    "exit_button@main_button": {
+        "$pressed_button_name": "button.menu_exit",
+        "$button_text": "gui.exit",
+        "size": [
+            "100%",
+            24
+        ]
+    },
+    "mod_btn@main_button": {
+        "$pressed_button_name": "button.menu_buy_game",
+        "$button_text": "Mods",
+        "ignored": "$mods_ignored"
+    },
+    "store_button@start.main_button": {
+        "$pressed_button_name": "button.menu_store",
+        "$button_text": "menu.store",
+        "$button_content": "start.store_button_content",
+        "$button_text_binding_type": "none",
+        "$button_binding_condition": "none",
+        "$button_text_grid_collection_name": "",
+        "tts_inherit_siblings": true
+    },
+    "horizontal_padding": {
+        "type": "panel",
+        "size": [
+            2,
+            0
+        ]
+    },
+    "start_screen_content": {
+        "$achievements_ignored|default": false
+    },
+    "main_buttons_panel": {
+        "type": "panel",
+        "size": [
+            150,
+            "100%c"
+        ],
+        "$mods_ignored": true,
+        "$quickplay_ignored": true,
+        "controls": [
+            {
+                "stacked_rows": {
+                    "type": "stack_panel",
+                    "size": [
+                        "100%",
+                        "100%c"
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "controls": [
+                        {
+                            "play_buttons@start.stacked_row": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "controls": [
+                                    {
+                                        "play_button@start.play_button": {
+                                            "size": [
+                                                "fill",
+                                                24
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "padding_0@start.horizontal_padding": {
+                                            "ignored": "$quickplay_ignored"
+                                        }
+                                    },
+                                    {
+                                        "quick_play_button@start.quick_play_button": {
+                                            "ignored": "$quickplay_ignored",
+                                            "size": [
+                                                "48.5%",
+                                                24
+                                            ],
+                                            "anchor_from": "top_left",
+                                            "anchor_to": "top_left"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "stacked_row_2@start.stacked_row": {
+                                "ignored": "(not $trial)",
+                                "controls": [
+                                    {
+                                        "stacked_columns": {
+                                            "type": "stack_panel",
+                                            "size": [
+                                                "100%",
+                                                "100%"
+                                            ],
+                                            "orientation": "horizontal",
+                                            "controls": [
+                                                {
+                                                    "stacked_col_0": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            "fill",
+                                                            "100%"
+                                                        ],
+                                                        "controls": [
+                                                            {
+                                                                "store_button@start.store_button": {
+                                                                    "enabled": "(not $store_disabled)"
+                                                                }
+                                                            },
+                                                            {
+                                                                "update_icon@start.update_prompt_icon": {
+                                                                    "ignored": true,
+                                                                    "size": [
+                                                                        "52.38%y",
+                                                                        15
+                                                                    ],
+                                                                    "offset": [
+                                                                        -16,
+                                                                        -6
+                                                                    ],
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_name": "#update_icon_visible",
+                                                                            "binding_name_override": "#visible",
+                                                                            "binding_condition": "always"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "new_offers_icon@start.new_offers_icon": {
+                                                                    "ignored": true,
+                                                                    "offset": [
+                                                                        8,
+                                                                        -6
+                                                                    ],
+                                                                    "anchor_from": "top_right",
+                                                                    "anchor_to": "top_right",
+                                                                    "bindings": [
+                                                                        {
+                                                                            "binding_name": "#new_offers",
+                                                                            "binding_name_override": "#visible"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "stacked_col_1": {
+                                                        "type": "panel",
+                                                        "size": [
+                                                            "fill",
+                                                            "100%"
+                                                        ],
+                                                        "ignored": "($store_ignored)",
+                                                        "controls": [
+                                                            {
+                                                                "settings_button@start.settings_button": {}
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "library@start.stacked_row": {
+                                "ignored": true,
+                                "controls": [
+                                    {
+                                        "padding_1@start.horizontal_padding": {}
+                                    },
+                                    {
+                                        "library_button@start.library_button": {}
+                                    },
+                                    {
+                                        "beta_icon@start.beta_icon": {
+                                            "ignored": false,
+                                            "offset": [
+                                                8,
+                                                -6
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "store@start.stacked_row": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "ignored": "(($trial) or ($store_ignored))",
+                                "controls": [
+                                    {
+                                        "achievements_button@start.achievements_button": {
+                                            "size": [
+                                                "50%",
+                                                24
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "padding_0@start.horizontal_padding": {
+                                            "ignored": "$mods_ignored"
+                                        }
+                                    },
+                                    {
+                                        "store_button@start.store_button": {
+                                            "enabled": "(not $store_disabled)",
+                                            "size": [
+                                                "fill",
+                                                24
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "update_icon@start.update_prompt_icon": {
+                                            "ignored": true,
+                                            "size": [
+                                                "52.38%y",
+                                                15
+                                            ],
+                                            "offset": [
+                                                -16,
+                                                -6
+                                            ],
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#update_icon_visible",
+                                                    "binding_name_override": "#visible",
+                                                    "binding_condition": "always"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "new_offers_icon@start.new_offers_icon": {
+                                            "ignored": true,
+                                            "offset": [
+                                                8,
+                                                -6
+                                            ],
+                                            "anchor_from": "top_right",
+                                            "anchor_to": "top_right",
+                                            "bindings": [
+                                                {
+                                                    "binding_name": "#new_offers",
+                                                    "binding_name_override": "#visible"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "settings_mods": {
+                                "type": "stack_panel",
+                                "orientation": "horizontal",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "size": [
+                                    "100%",
+                                    24
+                                ],
+                                "controls": [
+                                    {
+                                        "mods@start.mod_btn": {
+                                            "size": [
+                                                "50%",
+                                                "100%"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "padding_0@start.horizontal_padding": {
+                                            "ignored": "$mods_ignored"
+                                        }
+                                    },
+                                    {
+                                        "settings_button@start.settings_button": {
+                                            "size": [
+                                                "fill",
+                                                "100%"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "exit@start.stacked_row": {
+                                "controls": [
+                                    {
+                                        "exit@start.exit_button": {
+                                            "size": [
+                                                "100%",
+                                                24
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

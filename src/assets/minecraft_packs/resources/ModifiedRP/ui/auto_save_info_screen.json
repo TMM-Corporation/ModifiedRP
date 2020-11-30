@@ -1,0 +1,37 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "auto_save_info",
+
+  "auto_save_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 15,
+    "frame_step": 55,
+    "fps": 7,
+    "reversible": true,
+    "easing": "linear"
+  },
+
+  "auto_save": {
+    "type": "image",
+    "layer": 31,
+    "texture": "textures/ui/auto_save",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, "5%" ],
+    "size": [ 25, 25 ],
+    "uv_size": [ 55, 50 ],
+    "uv": "@auto_save_info.auto_save_animation",
+    "disable_anim_fast_forward": true,
+    "bindings": [
+      {
+        "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "namespace": "hud",
+    "auto_save_animation@auto_save_info.auto_save_animation": { },
+    "auto_save@auto_save_info.auto_save": {
+        "layer": 31,
+        "anchor_from": "top_right",
+        "anchor_to": "top_right",
+        "offset": [ -15, 15 ]
+    }
+}

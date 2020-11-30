@@ -1,0 +1,26 @@
+{
+  "namespace": "startup",
+
+  "startup_screen": {
+    "type": "screen",
+    "send_telemetry": false,
+    "load_screen_immediately": true,
+    "controls": [
+      {
+        "loading_image": {
+          "type": "image",
+          "layer": 1,
+          "fill": true,
+          "size": [ "100%", "100%" ],
+          "texture": "textures/ui/mod_icons/mod_no_icon",
+          "variables": [
+            {
+              "requires": "$nx_os",
+              "$loading_image_texture": "textures/ui/mojang_splash_screen"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

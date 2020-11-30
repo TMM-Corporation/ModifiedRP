@@ -1,0 +1,30 @@
+{
+    "format_version": 1,
+    "header": {
+        "description": "Beautiful Dark & Optimized Pack",
+        "name": "ModifiedRP",
+        "uuid": "e04d3453-97d8-416c-9f34-92969402524c",
+        "version": [3, 0, 0],
+        "min_engine_version": [1, 11, 4]
+    },
+    "modules": [
+        {
+            "description": "resourcePack.vanilla.description",
+            "type": "resources",
+            "uuid": "9ac29b06-1fe2-4be8-8ce2-3d1dbb4234a4",
+            "version": [3, 0, 0]
+        }
+    ],
+   "subpacks": [
+        {
+        "folder_name": "NetherUpdate",
+        "name": "Nether Update (v1.16)",
+        "memory_tier": 1
+        },
+        {
+            "folder_name": "Beta",
+            "name": "Beta",
+            "memory_tier": 1
+        }
+   ]
+}

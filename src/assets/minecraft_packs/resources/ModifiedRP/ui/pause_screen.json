@@ -1,0 +1,70 @@
+{
+  "namespace": "pause",
+ 
+  "menu_background@pause.transparent_background": {
+    "size": [ "100% - 2px", "100%c + 8px" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "button_panel": {
+          "type": "stack_panel",
+          "size": [ "100% - 8px", "100%c" ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            { "return_to_game_button@pause.return_to_game_button": {} },
+            { "return@pause.vertical_padding": {} },
+            { "server_store_button@pause.server_store_button": {} },
+            {
+              "server@pause.vertical_padding": {
+                "bindings": [ ]
+              }
+            },
+            {
+              "feed_and_screenshot_buttons": {
+                "type": "stack_panel",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "orientation": "horizontal",
+                "size": [ "100%", 28 ],
+                "controls": [
+                  {
+                    "settings_button@pause.settings_button": {
+                      "size": [ "fill", "100%" ]
+                    }
+                  },
+                  { "settings@pause.horizontal_padding": {} },
+                  {
+                    "take_screenshot_button@common_buttons.light_glyph_button": {
+                      "ignored": false,
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "$pressed_button_name": "button.screenshot",
+                      "$button_tts_header": "key.screenshot",
+                      "size": [ "25%-1px", "100%" ],
+                      "$button_content_offset": [ -1, 0 ],
+                      "$button_content": "pause.take_screenshot_icon",
+                      "$pressed_alpha": 0.65,
+                      "sound_name": "random.screenshot",
+                      "sound_volume": 1.0,
+                      "sound_pitch": 1.0
+                    }
+                  }
+                ],
+                "bindings": [ ]
+              }
+            },
+            {
+              "feedback_button@pause.feedback_button": {
+                "ignored": true
+              }
+            },
+            { "how_to_play@pause.vertical_padding": {} },
+            { "quit_button@pause.quit_button": {} }
+          ]
+        }
+      }
+    ]
+  }
+}

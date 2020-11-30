@@ -1,0 +1,16 @@
+{
+    // Alphabetical order please :)
+    "ui_defs": [
+      "ui/auto_save_info_screen.json",
+      "ui/chat_screen.json",
+      "ui/command_block_screen.json",
+      "ui/hud_screen.json",
+      "ui/modified_rp.json",
+      "ui/pause_screen.json",
+      "ui/progress.json",
+      "ui/start_screen.json",
+      "ui/startup_screen.json",
+      "ui/tabbed_upsell_screen.json",
+      "ui/win10_trial_conversion_screen.json"
+    ]
+}
