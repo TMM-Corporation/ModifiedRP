@@ -1,0 +1,57 @@
+{
+	"global": {
+		"info": {
+		  "name":"Modified Resource Pack",
+		  "author":"TooManyMods",
+		  "version":"Release 3.2",
+		  "description":"Beautiful Dark & Optimized Pack with features for Horizon",
+			"icon": "ModifiedRP/src/mod_icon.png"
+		},
+		"api": "CoreEngine"
+	},
+	"make": {
+		"debugAbi": "armeabi-v7a",
+		"abis": [
+			"armeabi-v7a",
+			"x86"
+		],
+		"linkNative": [
+			"minecraftpe",
+			"innercore",
+			"nativejs"
+		],
+		"excludeFromRelease": [],
+		"pushTo": "storage/emulated/0/games/horizon/packs/Inner_Core_Test/innercore/mods/ModifiedRP",
+		"ndkPath": null
+	},
+	"resources": [
+		{
+			"path": "ModifiedRP/src/assets/minecraft_packs/resources/*",
+			"type": "minecraft_resource_pack"
+		},
+		{
+			"path": "ModifiedRP/src/assets/minecraft_packs/behaviors/*",
+			"type": "minecraft_behavior_pack"
+		}
+	],
+	"sources": [
+		{
+			"source": "ModifiedRP/src/build/preloader",
+			"target": "preloader.js",
+			"type": "preloader",
+			"language": "typescript"
+		},
+		{
+			"source": "ModifiedRP/src/launcher.js",
+			"type": "launcher",
+			"language": "javascript"
+		}
+	],
+	"compile": [],
+	"additional": [
+		{
+			"source": "ModifiedRP/src/assets/root/*",
+			"targetDir": "."
+		}
+	]
+}
