@@ -36,3 +36,6 @@ item.rabbit.name=Rohes Kaninchen 
 item.rabbit_stew.name=Kaninchenragout 
 item.rotten_flesh.name=Verrottetes Fleisch 
 item.spider_eye.name=Spinnenauge 
+
+mrp.mods.label=Modifikationen
+mrp.installed_mods.label=Installierte Mods

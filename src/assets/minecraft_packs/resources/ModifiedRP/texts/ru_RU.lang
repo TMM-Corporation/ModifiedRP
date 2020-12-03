@@ -36,3 +36,6 @@ item.rabbit.name=Сырая крольчатина 	#
 item.rabbit_stew.name=Тушеный кролик 	#
 item.rotten_flesh.name=Гнилая плоть 	#
 item.spider_eye.name=Паучий глаз 	#
+
+mrp.mods.label=Моды	#
+mrp.installed_mods.label=Установленные моды	#

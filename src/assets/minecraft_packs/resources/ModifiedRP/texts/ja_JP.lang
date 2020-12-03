@@ -36,3 +36,6 @@ item.rabbit.name=生の兎肉 
 item.rabbit_stew.name=ウサギシチュー 
 item.rotten_flesh.name=腐肉 
 item.spider_eye.name=クモの目 
+
+mrp.mods.label=Mods
+mrp.installed_mods.label=インストールされた改造

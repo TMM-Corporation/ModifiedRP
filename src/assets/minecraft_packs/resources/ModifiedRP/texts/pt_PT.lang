@@ -36,3 +36,6 @@ item.rabbit.name=Coelho Cru 
 item.rabbit_stew.name=Guisado de Coelho 
 item.rotten_flesh.name=Carne Podre 
 item.spider_eye.name=Olho de Aranha 
+
+mrp.mods.label=Modificações
+mrp.installed_mods.label=Mods instalados

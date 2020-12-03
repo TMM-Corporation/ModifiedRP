@@ -36,3 +36,6 @@ item.rabbit.name=生兔肉 
 item.rabbit_stew.name=兔肉煲 
 item.rotten_flesh.name=腐肉 
 item.spider_eye.name=蜘蛛眼 
+
+mrp.mods.label=模组
+mrp.installed_mods.label=已安装的模组

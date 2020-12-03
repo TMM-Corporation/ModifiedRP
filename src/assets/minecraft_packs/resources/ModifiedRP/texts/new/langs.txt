@@ -1,0 +1,47 @@
+Hungarian: Telepített modok
+Bulgarian: Инсталирани модове
+Chinese Simplified: 已安装的模组
+Danish: Installerede mods
+Czech: Nainstalované mody
+Finnish: Asennetut modit
+Dutch: Geïnstalleerde mods
+French: Mods installés
+Indonesian: Modifikasi Terinstal
+German: Installierte Mods
+Italian: Mod installati
+Greek: Εγκατεστημένα Mods
+Japanese: インストールされた改造
+Korean: 설치된 모드
+Norwegian: Installerte mods
+Russian: Установленные моды
+Spanish: Mods instalados
+Swedish: Installerade mods
+Polish: Zainstalowane mody
+Portuguese: Mods instalados
+Turkish: Yüklü Modlar
+Ukrainian: Встановлені моди
+
+Bulgarian: Модове
+Czech: Mody
+Danish: Mods
+German: Modifikationen
+Greek: Mods
+English: Mods
+Spanish: Mods
+Finnish: Modit
+French: Mods
+Hungarian: Módok
+Indonesian: Modifikasi
+Italian: Mod
+Japanese: Mods
+Korean: 개조
+Norwegian: Mods
+Dutch: Mods
+Polish: Mody
+Portuguese: Modificações
+Russian: Моды
+Slovak: Mody
+Swedish: Mods
+Turkish: Modlar
+Ukrainian: Моди
+Chinese Simplified: 模组

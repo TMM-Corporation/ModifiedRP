@@ -47,3 +47,6 @@ item.muttonRaw.name=Raw Mutton 
 item.porkchop_cooked.name=Cooked Porkchop 
 item.spider_eye.name=Spider Eye 
 item.steak.name=Steak 
+
+mrp.mods.label=Mods
+mrp.installed_mods.label=Installed Mods

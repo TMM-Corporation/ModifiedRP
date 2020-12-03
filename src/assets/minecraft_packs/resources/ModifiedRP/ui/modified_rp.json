@@ -208,7 +208,7 @@
             "80%",
             "80%"
         ],
-        "$text_name": "Installed Mods",
+        "$text_name": "mrp.installed_mods.label",
         "$child_control": "mrp.dlg_scroll"
     }
 }

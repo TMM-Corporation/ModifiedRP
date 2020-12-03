@@ -36,3 +36,6 @@ item.rabbit.name=익히지 않은 토끼고기 
 item.rabbit_stew.name=토끼 스튜 
 item.rotten_flesh.name=썩은 고기 
 item.spider_eye.name=거미 눈 
+
+mrp.mods.label=개조
+mrp.installed_mods.label=설치된 모드

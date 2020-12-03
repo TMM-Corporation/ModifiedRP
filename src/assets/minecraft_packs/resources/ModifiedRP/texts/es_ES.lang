@@ -36,3 +36,6 @@ item.rabbit.name=Conejo crudo 
 item.rabbit_stew.name=Estofado de conejo 
 item.rotten_flesh.name=Carne podrida 
 item.spider_eye.name=Ojo de araña 
+
+mrp.mods.label=Mods
+mrp.installed_mods.label=Mods instalados

@@ -84,7 +84,7 @@
     },
     "mod_btn@main_button": {
         "$pressed_button_name": "button.menu_buy_game",
-        "$button_text": "Mods",
+        "$button_text": "mrp.mods.label",
         "ignored": "$mods_ignored"
     },
     "store_button@start.main_button": {

@@ -36,3 +36,6 @@ item.rabbit.name=Rauw konijn 
 item.rabbit_stew.name=Konijnenstoofschotel 
 item.rotten_flesh.name=Rot vlees 
 item.spider_eye.name=Spinnenoog 
+
+mrp.mods.label=Mods
+mrp.installed_mods.label=Geïnstalleerde mods

@@ -36,3 +36,6 @@ item.rabbit.name=Raw Rabbit 
 item.rabbit_stew.name=Rabbit Stew 
 item.rotten_flesh.name=Rotten Flesh 
 item.spider_eye.name=Spider Eye 
+
+mrp.mods.label=Mods
+mrp.installed_mods.label=Installed Mods

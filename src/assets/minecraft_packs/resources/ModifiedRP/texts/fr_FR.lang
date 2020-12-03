@@ -36,3 +36,6 @@ item.rabbit.name=Lapin cru 
 item.rabbit_stew.name=Ragoût de lapin 
 item.rotten_flesh.name=Chair putréfiée 
 item.spider_eye.name=Œil d'araignée 
+
+mrp.mods.label=Mods
+mrp.installed_mods.label=Mods installés
