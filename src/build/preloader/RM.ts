@@ -89,13 +89,15 @@ class ResourceManager {
 	 * @param dst destination path for file
 	 */
 	CopyToDest(src: string, dst: string): boolean {
-		try {
-			let srcChannel = new java.io.FileInputStream(src).getChannel()
-			let dstChannel = new java.io.FileOutputStream(dst).getChannel()
-			dstChannel.transferFrom(srcChannel, 0, srcChannel.size())
-			return true
-		} catch (e) {
-			throw e
+		if (new java.io.File(src).exists()) {
+			try {
+				let srcChannel = new java.io.FileInputStream(src).getChannel()
+				let dstChannel = new java.io.FileOutputStream(dst).getChannel()
+				dstChannel.transferFrom(srcChannel, 0, srcChannel.size())
+				return true
+			} catch (e) {
+				throw e
+			}
 		}
 	}
 	/**
